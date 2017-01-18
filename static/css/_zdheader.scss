@@ -1,0 +1,48 @@
+// HEADER STYLES MODULE
+.zdheader {
+  background-color: $navy-blue-10;
+  border: none;
+  border-radius: 0;
+  height: 60px;
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  .zdheader-logo{
+    &:hover, &:focus {
+      background-color: initial !important;
+    }
+  }
+  .logo-right {
+    display: none;
+    margin-left: 60px;
+    margin-top: 5px;
+    width: 150px;
+  }
+  .zdsearchbar {
+    border: 0;
+    box-shadow: none;
+    font-weight: 400;
+    margin: 8px 12px 0px 10px;
+    padding: 10px;
+    .fa-search {
+      color: $gray-90;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .form-group {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: middle;
+      width: 90%;
+      .zdsearchinput {
+        background-color: $navy-blue-20;
+        border-color: transparent;
+        border-radius: 0;
+        color: $gray-90;
+        font-style: italic;
+        height: 25px;
+      }
+    }
+  }
+}

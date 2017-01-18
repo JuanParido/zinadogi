@@ -1,0 +1,148 @@
+.left-sidebar {
+  background: $trans-black-11;
+  height: 100%;
+  position: fixed;
+  transition: all .175s;
+  width: 60px;
+  user-select: none;
+  z-index: 101;
+  .sidebar-branding {
+    display: inline-block;
+    .logo-left {
+      position: absolute;
+      display: none;
+      left: 10px;
+      margin: 0;
+      top: 20px;
+      width: 145px;
+    }
+  }
+  &.expanded {
+    width: 250px;
+    .zdsidebar {
+      background-color: $navy-blue-10;
+      .panel {
+        user-select: none;
+        .panel-heading {
+          text-align: left;
+          transition: all .175s ease;
+          &:hover{
+            .panel-title {
+              color: white;
+              .caret {
+                display: inline-block;
+              }
+            }
+          }
+          .panel-title {
+            .caret {
+              float: right;
+              font-size: 15px;
+              margin-top: 8px;
+              transition: all .175s ease;
+              transform: rotate(-90deg);
+              &.rotate {
+                transform: rotate(0deg);
+              }
+            }
+            .item-title {
+              font-family: $exo-regular;
+              display: inline-block;
+            }
+            .item-icon {
+              margin-right: 12px;
+              width: 20px;
+            }
+          }
+        }
+      }
+      .panel-body {
+        background-color: $navy-blue-20;
+        list-style: none;
+        padding: 0;
+        li {
+          box-sizing: border-box;
+          padding: 14px 20px 14px 60px;
+          &:hover {
+            background-color: $trans-black-11;
+            border-left: 3px solid $yellow;
+            padding-left:57px;
+          }
+          a {
+            display: block;
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  #toggle-sidemenu-l {
+    color: #fff;
+    cursor: pointer;
+    float: left;
+    font-size: 16px;
+    line-height: 60px;
+    max-height: 58px;
+    margin-bottom: 2px;
+    text-align: center;
+    transition: all .25s ease;
+    user-select: none;
+    width: 60px;
+    &.whirl {
+      transform: rotate(720deg);
+    }
+  }
+  .zdsidebar {
+    height: 100%;
+    overflow: hidden;
+    transition: all .175s;
+    width: 100%;
+    .panel {
+      background-color: transparent;
+      border: none;
+      border-radius: 0 !important;
+      box-shadow: none;
+      cursor: pointer;
+      margin: 0 0 2.5px 0;
+      .panel-heading {
+        background-color: transparent;
+        background-image: none;
+        border: none;
+        border-radius: 0 !important;
+        color: $gray-50;
+        padding: 15px;
+        text-align: center;
+        transition: all .25s ease;
+        &:hover {
+          background: rgba(0,0,0,0.25);
+          color: $gray-20;
+        }
+        .panel-title {
+          .caret {
+            display: none;
+          }
+          .item-title {
+            display: none;
+            text-transform: uppercase;
+          }
+        }
+      }
+      .panel-body {
+        list-style: none;
+      }
+    }
+  }
+}
+
+.panel-heading + .tooltip > .tooltip-inner {
+      background-color: $gray-20;
+      color: #FFFFFF; 
+      border: none; 
+      padding: 8px;
+      font-size: 14px;
+  }
+  /* Tooltip on right */
+  .panel-heading + .tooltip.right > .tooltip-arrow {
+      border-right: 5px solid $gray-20;
+  }
