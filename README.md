@@ -9,4 +9,4 @@ The files structure has been cleaned and styles for every section, modularized. 
 * Markup and basic styles for content
 * Script for basic animations to expand/collapse sidebar
 
-Arigato gozaimazu!!!
+# Arigato gozaimazu!!!
