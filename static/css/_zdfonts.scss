@@ -3,14 +3,14 @@ Font-face config
 ************************************/
 
 @font-face {
-    font-family: 'NokiaPureTWebLight';
-    src: url('../fonts/NokiaPureTWeb_Lt.eot');
-    src: url('../fonts/NokiaPureTWeb_Lt.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/NokiaPureTWeb_Lt.woff') format('woff'),
-         url('../fonts/NokiaPureTWeb_Lt.ttf') format('truetype'),
-         url('../fonts/NokiaPureTWeb_Lt.svg#NokiaPureTWebLight') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'NokiaPureTWebLight';
+  src: url('../fonts/NokiaPureTWeb_Lt.eot');
+  src: url('../fonts/NokiaPureTWeb_Lt.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/NokiaPureTWeb_Lt.woff') format('woff'),
+    url('../fonts/NokiaPureTWeb_Lt.ttf') format('truetype'),
+    url('../fonts/NokiaPureTWeb_Lt.svg#NokiaPureTWebLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
 
 }
 
@@ -67,23 +67,24 @@ $nokiafont-ultralight: "nokia-pure-headline-ultralight";
 $font-awesome: "fontawesome";
 $exo-regular: "exo_2regular_condensed";
 
-h1, h2, h3, h4, h5, h6{
-    margin-top:0;
-    font-family: $nokiafont-regular;
-    font-weight: normal;
+h1, h2, h3, h4, h5, h6 {
+  margin-top:0; 
+  font-family: $nokiafont-light;
+  font-weight: normal;
 }
 h1{ font-size: 36px; }
-h2{ font-size: 24px; }
-h3{ font-size: 15px; }
-h4{ font-size: 14px; }
+h2{ font-size: 32px; }
+h3{ font-size: 28px; }
+h4{ font-size: 24px; }
+h5{ font-size: 20px; }
+h6{ font-size: 16px; }
 
-.title-wrapper{
-    margin-bottom: 20px;
-    h1{
-        display: inline-block;
-        margin-bottom: 0px;
-    }
+strong {
+  font-family: $nokiafont-bold;
 }
-strong{
-    font-family: $nokiafont-bold;
+
+p {
+  font-size: 13.5px;
+  line-height: 20px;
 }
+

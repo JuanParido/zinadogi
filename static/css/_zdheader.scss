@@ -3,19 +3,20 @@
   background-color: $navy-blue-10;
   border: none;
   border-radius: 0;
-  height: 60px;
+  height: 50px;
   margin: 0;
   position: fixed;
   width: 100%;
   z-index: 100;
   .zdheader-logo{
+    padding: 10px 15px;
     &:hover, &:focus {
       background-color: initial !important;
     }
   }
   .logo-right {
     display: none;
-    margin-left: 60px;
+    margin-left: 40px;
     margin-top: 5px;
     width: 150px;
   }
@@ -23,12 +24,12 @@
     border: 0;
     box-shadow: none;
     font-weight: 400;
-    margin: 8px 12px 0px 10px;
+    margin: 4px 12px 0px 10px;
     padding: 10px;
     .fa-search {
       color: $gray-90;
       font-size: 16px;
-      line-height: 20px;
+      line-height: 23px;
     }
     .form-group {
       display: inline-block;
@@ -40,6 +41,7 @@
         border-color: transparent;
         border-radius: 0;
         color: $gray-90;
+        font-size: 12px;
         font-style: italic;
         height: 25px;
       }

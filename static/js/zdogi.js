@@ -27,11 +27,11 @@ $(function(){
     else {
       $('.logo-left').fadeOut(100);
       setTimeout(function(){
-        $('.logo-right').animate({marginLeft: "60px", opacity: 0},175, "swing");
+        $('.logo-right').animate({marginLeft: "40px", opacity: 0},175, "swing");
         $('.logo-right').animate({opacity: 1},500,"swing");
         $('#toggle-sidemenu-l').css('float', 'left');
         $('.panel-collapse').collapse('hide');
-        $('.the-content').animate({paddingLeft: "80px"},175, "swing");
+        $('.the-content').animate({paddingLeft: "60px"},175, "swing");
         $('[data-toggle="tooltip"]').tooltip();
       });
     }

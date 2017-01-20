@@ -1,10 +1,18 @@
 .zdfooter {
 	background-color: $navy-blue-5;
 	color: $gray-90;
-	height: 40px;
+	height: 30px;
 	line-height: 20px;
-	padding: 10px 40px;
+	margin: 0;
+	margin-top: 10px;
+	padding: 5px 40px 0;
 	position: absolute;
 	width: 100%;
 	z-index: 110;
+	.zdfooter-logo {
+		width: 80px;
+	}
+	ul {
+    margin-bottom: 0;
+  }
 }
