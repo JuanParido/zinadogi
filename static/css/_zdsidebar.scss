@@ -13,8 +13,8 @@
       display: none;
       left: 10px;
       margin: 0;
-      top: 15px;
-      width: 145px;
+      top: 10px;
+      width: 115px;
     }
   }
   &.expanded {
@@ -26,6 +26,7 @@
         .panel-heading {
           text-align: left;
           transition: all .175s ease;
+          color: #ebebeb;
           &:hover{
             .panel-title {
               color: white;
@@ -52,6 +53,10 @@
             .item-icon {
               margin-right: 12px;
               width: 20px;
+            }
+            .item-icon-img {
+              margin-right: 12px;
+              width: 16px;
             }
           }
         }
@@ -139,8 +144,8 @@
 
 .panel-heading + .tooltip > .tooltip-inner {
       background-color: $gray-20;
-      color: #FFFFFF; 
-      border: none; 
+      color: #FFFFFF;
+      border: none;
       padding: 8px;
       font-size: 14px;
   }

@@ -1,10 +1,9 @@
 @import 'zdpalette';
 @import 'zdfonts';
 * {
-  border-radius: none;
   box-sizing: border-box;
   font-family: $nokiafont-light; // Default font family
-  font-size: 12px;
+  font-size: 14px;
   margin: 0;
   padding: 0;
 }
@@ -14,14 +13,13 @@ body {
 .content {
   min-height: calc(100vh - 40px);
   .the-content {
-    padding: 65px 20px 50px 60px;
+    padding: 65px 20px 0px 60px;
     .tile-box {
       background-color: #ffffff;
       border-radius: 2px;
       box-shadow: 0 0 5px 0 rgba(92,92,92,0.2);
-      margin-bottom: 15px;
       overflow: hidden;
-      padding: 30px;
+      padding: 15px 30px;
     }
   }
 }

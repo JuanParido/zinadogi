@@ -8,8 +8,22 @@
   position: fixed;
   width: 100%;
   z-index: 100;
+  .separator {
+    color: white;
+    font-family: $nokiafont-ultralight;
+    font-size: 30px;
+    line-height: 49px;
+  }
+  .main-title {
+    color: white;
+    font-family: $nokiafont-ultralight;
+    font-size: 34px;
+    font-weight: normal;
+    line-height: 58px;
+    padding-left: 15px;
+  }
   .zdheader-logo{
-    padding: 10px 15px;
+    padding: 5px 15px;
     &:hover, &:focus {
       background-color: initial !important;
     }
@@ -18,7 +32,7 @@
     display: none;
     margin-left: 40px;
     margin-top: 5px;
-    width: 150px;
+    width: 120px;
   }
   .zdsearchbar {
     border: 0;

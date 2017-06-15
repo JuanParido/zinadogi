@@ -20,6 +20,11 @@ Font-face config
   font-weight: normal;
   font-style: normal; }
 @font-face {
+  font-family: 'NokiaPureTWebUltraLight';
+  src: url("../fonts/nokiapureheadline_ultralight-webfont.woff2") format("woff2"), url("../fonts/nokiapureheadline_ultralight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
   font-family: 'fontawesome';
   src: url("../fonts/FontAwesome-webfont.eot");
   src: url("../fonts/FontAwesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg#fontawesomeregular") format("svg");
@@ -30,74 +35,83 @@ Font-face config
   src: url("../fonts/exo2-regularcondensed-webfont.woff2") format("woff2"), url("../fonts/exo2-regularcondensed-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
-/* line 70, _zdfonts.scss */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   font-family: "NokiaPureTWebLight";
   font-weight: normal; }
+  h1.strong, h2.strong, h3.strong, h4.strong, h5.strong, h6.strong {
+    font-weight: bold; }
 
-/* line 75, _zdfonts.scss */
 h1 {
-  font-size: 36px; }
-
-/* line 76, _zdfonts.scss */
-h2 {
   font-size: 32px; }
 
-/* line 77, _zdfonts.scss */
-h3 {
+h2 {
   font-size: 28px; }
 
-/* line 78, _zdfonts.scss */
-h4 {
+h3 {
   font-size: 24px; }
 
-/* line 79, _zdfonts.scss */
+h4 {
+  font-size: 22px; }
+
 h5 {
-  font-size: 20px; }
+  font-size: 18px; }
 
-/* line 80, _zdfonts.scss */
 h6 {
-  font-size: 16px; }
+  font-size: 14px; }
 
-/* line 82, _zdfonts.scss */
 strong {
   font-family: "NokiaPureTWebBold"; }
 
-/* line 86, _zdfonts.scss */
 p {
   font-size: 13.5px;
   line-height: 20px; }
 
-/* line 3, _zdbase.scss */
+.tile-title {
+  color: #4f4f4f;
+  margin-bottom: 20px; }
+
 * {
-  border-radius: none;
   box-sizing: border-box;
   font-family: "NokiaPureTWebLight";
-  font-size: 12px;
+  font-size: 14px;
   margin: 0;
   padding: 0; }
 
-/* line 11, _zdbase.scss */
 body {
   background-color: #e9e9e9; }
 
-/* line 14, _zdbase.scss */
 .content {
   min-height: calc(100vh - 40px); }
-  /* line 16, _zdbase.scss */
   .content .the-content {
-    padding: 65px 20px 50px 60px; }
-    /* line 18, _zdbase.scss */
+    padding: 65px 20px 0px 60px; }
     .content .the-content .tile-box {
       background-color: #ffffff;
       border-radius: 2px;
       box-shadow: 0 0 5px 0 rgba(92, 92, 92, 0.2);
-      margin-bottom: 15px;
       overflow: hidden;
-      padding: 30px; }
+      padding: 15px 30px; }
 
-/* line 2, _zdheader.scss */
+.alert {
+  border-radius: 3px;
+  color: white !important; }
+  .alert.alert-danger {
+    border-color: #d73925;
+    background-color: #dd4b39 !important;
+    background-image: none !important; }
+  .alert.alert-warning {
+    border-color: #e08e0b;
+    background-color: #f39c12 !important;
+    background-image: none !important; }
+  .alert.alert-success {
+    border-color: #008d4c;
+    background-color: #00a65a !important;
+    background-image: none !important; }
+  .alert.alert-info {
+    border-color: #00acd6;
+    background-color: #00c0ef !important;
+    background-image: none !important; }
+
 .zdheader {
   background-color: #042035;
   border: none;
@@ -107,37 +121,42 @@ body {
   position: fixed;
   width: 100%;
   z-index: 100; }
-  /* line 11, _zdheader.scss */
+  .zdheader .separator {
+    color: white;
+    font-family: "NokiaPureTWebUltraLight";
+    font-size: 30px;
+    line-height: 49px; }
+  .zdheader .main-title {
+    color: white;
+    font-family: "NokiaPureTWebUltraLight";
+    font-size: 34px;
+    font-weight: normal;
+    line-height: 58px;
+    padding-left: 15px; }
   .zdheader .zdheader-logo {
-    padding: 10px 15px; }
-    /* line 13, _zdheader.scss */
+    padding: 5px 15px; }
     .zdheader .zdheader-logo:hover, .zdheader .zdheader-logo:focus {
       background-color: initial !important; }
-  /* line 17, _zdheader.scss */
   .zdheader .logo-right {
     display: none;
     margin-left: 40px;
     margin-top: 5px;
-    width: 150px; }
-  /* line 23, _zdheader.scss */
+    width: 120px; }
   .zdheader .zdsearchbar {
     border: 0;
     box-shadow: none;
     font-weight: 400;
     margin: 4px 12px 0px 10px;
     padding: 10px; }
-    /* line 29, _zdheader.scss */
     .zdheader .zdsearchbar .fa-search {
       color: #e9e9e9;
       font-size: 16px;
       line-height: 23px; }
-    /* line 34, _zdheader.scss */
     .zdheader .zdsearchbar .form-group {
       display: inline-block;
       margin-bottom: 0;
       vertical-align: middle;
       width: 90%; }
-      /* line 39, _zdheader.scss */
       .zdheader .zdsearchbar .form-group .zdsearchinput {
         background-color: #093252;
         border-color: transparent;
@@ -147,96 +166,69 @@ body {
         font-style: italic;
         height: 25px; }
 
-/* line 1, _zdsidebar.scss */
 .left-sidebar {
   background: rgba(0, 0, 0, 0.11);
   height: 100%;
   position: fixed;
-  -webkit-transition: all .175s;
-          transition: all .175s;
+  transition: all .175s;
   width: 40px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   z-index: 101; }
-  /* line 9, _zdsidebar.scss */
   .left-sidebar .sidebar-branding {
     display: inline-block; }
-    /* line 11, _zdsidebar.scss */
     .left-sidebar .sidebar-branding .logo-left {
       position: absolute;
       display: none;
       left: 10px;
       margin: 0;
-      top: 15px;
-      width: 145px; }
-  /* line 20, _zdsidebar.scss */
+      top: 10px;
+      width: 115px; }
   .left-sidebar.expanded {
     width: 250px; }
-    /* line 22, _zdsidebar.scss */
     .left-sidebar.expanded .zdsidebar {
       background-color: #042035; }
-      /* line 24, _zdsidebar.scss */
       .left-sidebar.expanded .zdsidebar .panel {
-        -webkit-user-select: none;
-           -moz-user-select: none;
-            -ms-user-select: none;
-                user-select: none; }
-        /* line 26, _zdsidebar.scss */
+        user-select: none; }
         .left-sidebar.expanded .zdsidebar .panel .panel-heading {
           text-align: left;
-          -webkit-transition: all .175s ease;
-                  transition: all .175s ease; }
-          /* line 30, _zdsidebar.scss */
+          transition: all .175s ease;
+          color: #ebebeb; }
           .left-sidebar.expanded .zdsidebar .panel .panel-heading:hover .panel-title {
             color: white; }
-            /* line 32, _zdsidebar.scss */
             .left-sidebar.expanded .zdsidebar .panel .panel-heading:hover .panel-title .caret {
               display: inline-block; }
-          /* line 38, _zdsidebar.scss */
           .left-sidebar.expanded .zdsidebar .panel .panel-heading .panel-title .caret {
             float: right;
             font-size: 15px;
             margin-top: 8px;
-            -webkit-transition: all .175s ease;
-                    transition: all .175s ease;
-            -webkit-transform: rotate(-90deg);
-                -ms-transform: rotate(-90deg);
-                    transform: rotate(-90deg); }
-            /* line 44, _zdsidebar.scss */
+            transition: all .175s ease;
+            transform: rotate(-90deg); }
             .left-sidebar.expanded .zdsidebar .panel .panel-heading .panel-title .caret.rotate {
-              -webkit-transform: rotate(0deg);
-                  -ms-transform: rotate(0deg);
-                      transform: rotate(0deg); }
-          /* line 48, _zdsidebar.scss */
+              transform: rotate(0deg); }
           .left-sidebar.expanded .zdsidebar .panel .panel-heading .panel-title .item-title {
             font-family: "exo_2regular_condensed";
             display: inline-block; }
-          /* line 52, _zdsidebar.scss */
           .left-sidebar.expanded .zdsidebar .panel .panel-heading .panel-title .item-icon {
             margin-right: 12px;
             width: 20px; }
-      /* line 59, _zdsidebar.scss */
+          .left-sidebar.expanded .zdsidebar .panel .panel-heading .panel-title .item-icon-img {
+            margin-right: 12px;
+            width: 16px; }
       .left-sidebar.expanded .zdsidebar .panel-body {
         background-color: #093252;
         list-style: none;
         padding: 0; }
-        /* line 63, _zdsidebar.scss */
         .left-sidebar.expanded .zdsidebar .panel-body li {
           box-sizing: border-box;
           padding: 14px 20px 14px 60px; }
-          /* line 66, _zdsidebar.scss */
           .left-sidebar.expanded .zdsidebar .panel-body li:hover {
             background-color: rgba(0, 0, 0, 0.11);
             border-left: 3px solid #ffc107;
             padding-left: 57.5px; }
-          /* line 71, _zdsidebar.scss */
           .left-sidebar.expanded .zdsidebar .panel-body li a {
             display: block;
             color: white;
             text-decoration: none; }
-  /* line 80, _zdsidebar.scss */
   .left-sidebar #toggle-sidemenu-l {
     color: #fff;
     cursor: pointer;
@@ -245,31 +237,18 @@ body {
     line-height: 50px;
     max-height: 50px;
     text-align: center;
-    -webkit-transition: all .25s ease;
-            transition: all .25s ease;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    transition: all .25s ease;
+    user-select: none;
     width: 40px; }
-    /* line 91, _zdsidebar.scss */
     .left-sidebar #toggle-sidemenu-l.whirl {
-      -webkit-transform: rotate(720deg);
-          -ms-transform: rotate(720deg);
-              transform: rotate(720deg); }
-    /* line 94, _zdsidebar.scss */
+      transform: rotate(720deg); }
     .left-sidebar #toggle-sidemenu-l:hover {
-      -webkit-transform: scale(1.3);
-          -ms-transform: scale(1.3);
-              transform: scale(1.3); }
-  /* line 98, _zdsidebar.scss */
+      transform: scale(1.3); }
   .left-sidebar .zdsidebar {
     height: 100%;
     overflow: hidden;
-    -webkit-transition: all .175s;
-            transition: all .175s;
+    transition: all .175s;
     width: 100%; }
-    /* line 103, _zdsidebar.scss */
     .left-sidebar .zdsidebar .panel {
       background-color: transparent;
       border: none;
@@ -277,7 +256,6 @@ body {
       box-shadow: none;
       cursor: pointer;
       margin: 0 0 2.5px 0; }
-      /* line 110, _zdsidebar.scss */
       .left-sidebar .zdsidebar .panel .panel-heading {
         background-color: transparent;
         background-image: none;
@@ -286,24 +264,18 @@ body {
         color: #888888;
         padding: 10px;
         text-align: center;
-        -webkit-transition: all .25s ease;
-                transition: all .25s ease; }
-        /* line 119, _zdsidebar.scss */
+        transition: all .25s ease; }
         .left-sidebar .zdsidebar .panel .panel-heading:hover {
           background: rgba(0, 0, 0, 0.25);
           color: #333333; }
-        /* line 124, _zdsidebar.scss */
         .left-sidebar .zdsidebar .panel .panel-heading .panel-title .caret {
           display: none; }
-        /* line 127, _zdsidebar.scss */
         .left-sidebar .zdsidebar .panel .panel-heading .panel-title .item-title {
           display: none;
           text-transform: uppercase; }
-      /* line 133, _zdsidebar.scss */
       .left-sidebar .zdsidebar .panel .panel-body {
         list-style: none; }
 
-/* line 140, _zdsidebar.scss */
 .panel-heading + .tooltip > .tooltip-inner {
   background-color: #333333;
   color: #FFFFFF;
@@ -312,11 +284,9 @@ body {
   font-size: 14px; }
 
 /* Tooltip on right */
-/* line 148, _zdsidebar.scss */
 .panel-heading + .tooltip.right > .tooltip-arrow {
   border-right: 5px solid #333333; }
 
-/* line 1, _zdfooter.scss */
 .zdfooter {
   background-color: #041624;
   color: #e9e9e9;
@@ -328,9 +298,153 @@ body {
   position: absolute;
   width: 100%;
   z-index: 110; }
-  /* line 12, _zdfooter.scss */
   .zdfooter .zdfooter-logo {
     width: 80px; }
-  /* line 15, _zdfooter.scss */
   .zdfooter ul {
     margin-bottom: 0; }
+  .zdfooter #about {
+    color: white; }
+
+.zd-form, input:not([type="radio"]), textarea, select {
+  border: 1px solid #cacaca;
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding: 0px 3px;
+  width: 100%; }
+
+input:not([type="radio"]) {
+  height: 30px;
+  font-size: 14px;
+  position: relative;
+  border-radius: 1px; }
+  input:not([type="radio"])::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #aaaaaa;
+    font-style: italic; }
+  input:not([type="radio"])::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #aaaaaa;
+    font-style: italic; }
+  input:not([type="radio"]):-ms-input-placeholder {
+    /* IE 10+ */
+    color: #aaaaaa;
+    font-style: italic; }
+  input:not([type="radio"]):-moz-placeholder {
+    /* Firefox 18- */
+    color: #aaaaaa;
+    font-style: italic; }
+
+.datepicker-btn {
+  color: white;
+  background: #042035;
+  border: none;
+  padding: 8px;
+  margin-top: 1px;
+  position: absolute;
+  z-index: 2;
+  right: 15px;
+  transition: .3s ease all;
+  top: 0; }
+
+select {
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 1px !important; }
+
+.btn {
+  border: none;
+  border-radius: 2px;
+  color: white;
+  height: 30px;
+  line-height: 9px;
+  padding: 5px 20px;
+  font-size: 13px;
+  transition: .3s ease all; }
+  .btn.btn-danger {
+    background: #dd4b39;
+    background-image: none; }
+    .btn.btn-danger:hover {
+      background: #ed5f64; }
+  .btn.btn-warning {
+    background: #f39c12;
+    background-image: none;
+    text-shadow: none; }
+    .btn.btn-warning:hover {
+      background: #ffd866; }
+  .btn.btn-success {
+    background: #00a65a;
+    background-image: none;
+    text-shadow: none; }
+    .btn.btn-success:hover {
+      background: #95b895; }
+  .btn.btn-default {
+    background: #042035;
+    background-image: none;
+    text-shadow: none; }
+    .btn.btn-default:hover {
+      background: #093252;
+      color: white; }
+
+#login-head {
+  background: rgba(0, 0, 0, 0.8);
+  position: relative;
+  height: 55px; }
+  #login-head .logo-login {
+    top: 50%;
+    margin-top: -25px;
+    left: 15px;
+    position: absolute;
+    height: 50px; }
+
+#login-alert.alert {
+  height: auto !important;
+  padding: 8px; }
+
+#login-body {
+  background: url("../img/login-bground.jpg");
+  background-size: cover; }
+
+#login-frame {
+  background: rgba(39, 49, 66, 0.8);
+  color: white;
+  font-family: "NokiaPureTWebLight";
+  margin-top: 12vh;
+  overflow: hidden;
+  padding: 75px 50px; }
+  #login-frame h1 {
+    text-align: center;
+    font-size: 4em; }
+  #login-frame p {
+    text-align: center;
+    font-size: 1.35em;
+    margin-top: 2em; }
+
+.login-form {
+  margin-top: 35px; }
+  .login-form .login-input .input-group {
+    height: 35px;
+    margin-bottom: 20px;
+    width: 100%; }
+  .login-form #login-button {
+    background: #4bdd33;
+    color: white;
+    font-size: 1.5em;
+    height: 35px;
+    line-height: 1em;
+    width: 100%; }
+  .login-form a {
+    color: white;
+    font-size: 0.8em;
+    text-align: center;
+    text-decoration: underline; }
+    .login-form a:hover {
+      color: #2bc1ec; }
+
+/* Constants */
+.no-left-padding {
+  padding-left: 0 !important; }
+
+.no-right-padding {
+  padding-right: 0 !important; }
+
+/*# sourceMappingURL=zd-style.css.map */

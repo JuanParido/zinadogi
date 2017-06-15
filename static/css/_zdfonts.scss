@@ -39,6 +39,15 @@ Font-face config
 }
 
 @font-face {
+    font-family: 'NokiaPureTWebUltraLight';
+    src: url('../fonts/nokiapureheadline_ultralight-webfont.woff2') format('woff2'),
+         url('../fonts/nokiapureheadline_ultralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
     font-family: 'fontawesome';
     src: url('../fonts/FontAwesome-webfont.eot');
     src: url('../fonts/FontAwesome-webfont.eot?#iefix') format('embedded-opentype'),
@@ -63,21 +72,24 @@ Font-face config
 $nokiafont-light: "NokiaPureTWebLight";
 $nokiafont-regular: "NokiaPureTWebRegular";
 $nokiafont-bold: "NokiaPureTWebBold";
-$nokiafont-ultralight: "nokia-pure-headline-ultralight";
+$nokiafont-ultralight: "NokiaPureTWebUltraLight";
 $font-awesome: "fontawesome";
 $exo-regular: "exo_2regular_condensed";
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top:0; 
+  margin-top:0;
   font-family: $nokiafont-light;
   font-weight: normal;
+  &.strong {
+    font-weight: bold;
+  }
 }
-h1{ font-size: 36px; }
-h2{ font-size: 32px; }
-h3{ font-size: 28px; }
-h4{ font-size: 24px; }
-h5{ font-size: 20px; }
-h6{ font-size: 16px; }
+h1{ font-size: 32px; }
+h2{ font-size: 28px; }
+h3{ font-size: 24px; }
+h4{ font-size: 22px; }
+h5{ font-size: 18px; }
+h6{ font-size: 14px; }
 
 strong {
   font-family: $nokiafont-bold;
@@ -88,3 +100,7 @@ p {
   line-height: 20px;
 }
 
+.tile-title {
+  color: #4f4f4f;
+  margin-bottom: 20px;
+}

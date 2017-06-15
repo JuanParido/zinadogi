@@ -1,0 +1,8 @@
+.alert {
+  border-radius: 3px;
+  color: white !important;
+  &.alert-danger {border-color: $danger-border; background-color: $danger !important;background-image:none !important;}
+  &.alert-warning {border-color: $warning-border; background-color: $warning !important;background-image:none !important;}
+  &.alert-success {border-color: $success-border; background-color: $success !important;background-image:none !important;}
+  &.alert-info {border-color: $info-border; background-color: $info !important;background-image:none !important;}
+}
