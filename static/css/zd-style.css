@@ -30,11 +30,6 @@ Font-face config
   src: url("../fonts/FontAwesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-@font-face {
-  font-family: 'exo_2regular_condensed';
-  src: url("../fonts/exo2-regularcondensed-webfont.woff2") format("woff2"), url("../fonts/exo2-regularcondensed-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   font-family: "NokiaPureTWebLight";
@@ -140,8 +135,8 @@ body {
   .zdheader .logo-right {
     display: none;
     margin-left: 40px;
-    margin-top: 5px;
-    width: 120px; }
+    margin-top: 10px;
+    width: 150px; }
   .zdheader .zdsearchbar {
     border: 0;
     box-shadow: none;
@@ -181,8 +176,8 @@ body {
       display: none;
       left: 10px;
       margin: 0;
-      top: 10px;
-      width: 115px; }
+      top: 15px;
+      width: 150px; }
   .left-sidebar.expanded {
     width: 250px; }
     .left-sidebar.expanded .zdsidebar {
@@ -206,7 +201,7 @@ body {
             .left-sidebar.expanded .zdsidebar .panel .panel-heading .panel-title .caret.rotate {
               transform: rotate(0deg); }
           .left-sidebar.expanded .zdsidebar .panel .panel-heading .panel-title .item-title {
-            font-family: "exo_2regular_condensed";
+            font-family: "NokiaPureTWebLight";
             display: inline-block; }
           .left-sidebar.expanded .zdsidebar .panel .panel-heading .panel-title .item-icon {
             margin-right: 12px;
@@ -276,16 +271,22 @@ body {
       .left-sidebar .zdsidebar .panel .panel-body {
         list-style: none; }
 
-.panel-heading + .tooltip > .tooltip-inner {
-  background-color: #333333;
-  color: #FFFFFF;
-  border: none;
-  padding: 8px;
-  font-size: 14px; }
-
-/* Tooltip on right */
-.panel-heading + .tooltip.right > .tooltip-arrow {
-  border-right: 5px solid #333333; }
+.panel-heading .menuTip {
+  background: rgba(4, 32, 53, 0.55);
+  color: white;
+  display: block;
+  font-size: 9.5pt;
+  padding: 2px 5px;
+  position: absolute;
+  transform: translateY(-22px);
+  transition: all .3s ease;
+  left: 45px;
+  opacity: 1;
+  white-space: nowrap; }
+  .panel-heading .menuTip.out {
+    transition: all .1s ease;
+    left: -120px;
+    opacity: 0; }
 
 .zdfooter {
   background-color: #041624;

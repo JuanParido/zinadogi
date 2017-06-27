@@ -12,7 +12,6 @@ $(function(){
       }
   }
   sidebarValidation();
-  console.log(sidebarValidation());
   //TOGGLE MENU FUNCTION
   var toggleMenu = function(e){
     $('#toggle-sidemenu-l').toggleClass('fa-bars').toggleClass('fa-arrow-left').toggleClass('whirl');
@@ -32,7 +31,7 @@ $(function(){
         $('#toggle-sidemenu-l').css('float', 'left');
         $('.panel-collapse').collapse('hide');
         $('.the-content').animate({paddingLeft: "60px"},175, "swing");
-        $('[data-toggle="tooltip"]').tooltip();
+
       });
     }
     sidebarValidation();
@@ -50,4 +49,36 @@ $(function(){
       $(this).find('.caret').removeClass('rotate');
     }
   })
+  //AutoCopyrightFunction
+  var currYear = (new Date).getFullYear();
+  var cR = $('.copyright')
+  cR.append('<li>© Nokia</li>')
+  .append('<li>|</li>')
+  .append('<li>ZINATeam ' + currYear + '</li>')
+  .append('<li>|</li>')
+  .append('<li><a id="about" href="#">About us</a></li>');
+  //Collapsed menu guide
+
+    itemMenu = $('.item-button');
+    itemMenu.mouseenter(function(){
+      if(!($('.left-sidebar').hasClass('expanded'))) {
+        var text = $(this).text();
+        var menuTip = $(this).find('span.menuTip');
+        if(menuTip.text() == 0){
+          menuTip.text(text);
+        }
+        setTimeout(function(){
+          menuTip.removeClass('out');
+        },1)
+      }
+    })
+    itemMenu.mouseleave(function(){
+       if(!($('.left-sidebar').hasClass('expanded'))) {
+        var menuTip = $(this).find('span.menuTip');
+        menuTip.addClass('out');
+      }
+    }).click(function(){
+        var menuTip = $(this).find('span.menuTip');
+        menuTip.addClass('out');
+    });
 });

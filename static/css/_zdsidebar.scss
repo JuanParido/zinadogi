@@ -13,8 +13,8 @@
       display: none;
       left: 10px;
       margin: 0;
-      top: 10px;
-      width: 115px;
+      top: 15px;
+      width: 150px;
     }
   }
   &.expanded {
@@ -47,7 +47,7 @@
               }
             }
             .item-title {
-              font-family: $exo-regular;
+              font-family: $nokiafont-light;
               display: inline-block;
             }
             .item-icon {
@@ -142,14 +142,21 @@
   }
 }
 
-.panel-heading + .tooltip > .tooltip-inner {
-      background-color: $gray-20;
-      color: #FFFFFF;
-      border: none;
-      padding: 8px;
-      font-size: 14px;
+.panel-heading .menuTip {
+  background: rgba(4, 32, 53, 0.55);
+  color: white;
+  display: block;
+  font-size: 9.5pt;
+  padding: 2px 5px;
+  position: absolute;
+  transform: translateY(-22px);
+  transition: all .3s ease;
+  left: 45px;
+  opacity: 1;
+  white-space: nowrap;
+  &.out {
+    transition: all .1s ease;
+    left: -120px;
+    opacity: 0;
   }
-  /* Tooltip on right */
-  .panel-heading + .tooltip.right > .tooltip-arrow {
-      border-right: 5px solid $gray-20;
-  }
+}
