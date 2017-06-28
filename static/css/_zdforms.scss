@@ -54,6 +54,7 @@ select {
   border-radius: 1px !important;
 }
 
+a.btn {line-height: 22px;}
 .btn {
     border: none;
     border-radius: 2px;
@@ -63,6 +64,13 @@ select {
     padding: 5px 20px;
     font-size: 13px;
     transition: .3s ease all;
+    &.btn-info {
+      background: $info;
+      background-image: none;
+      &:hover {
+        background: $info-hover;
+      }
+    }
     &.btn-danger {
       background: $danger;
       background-image: none;

@@ -6,3 +6,59 @@
   &.alert-success {border-color: $success-border; background-color: $success !important;background-image:none !important;}
   &.alert-info {border-color: $info-border; background-color: $info !important;background-image:none !important;}
 }
+//Callouts
+
+.bs-callout {
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    box-shadow: 0 0 5px 0 rgba(92,92,92,0.2);
+    overflow: hidden;
+    padding: 15px 30px;
+    h4 {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    code {
+      border-radius: 3px;
+    }
+    &+.bs-callout {
+      margin-top: -5px;
+    }
+    &-default {
+      border-left-color: #777;
+      h4 {
+        color: #777;
+      }
+    }
+    &-success {
+      border-left-color: $success-border;
+      h4 {
+        color: $success;
+      }
+    }
+    &-warning {
+      border-left-color: $warning-border;
+      h4 {
+        color: $warning;
+      }
+    }
+    &-danger {
+      border-left-color: $danger-border;
+      h4 {
+        color: $danger;
+      }
+    }
+    &-info {
+      border-left-color: $info-border;
+      h4 {
+        color: $info;
+      }
+    }
+}

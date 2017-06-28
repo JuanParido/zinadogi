@@ -107,6 +107,44 @@ body {
     background-color: #00c0ef !important;
     background-image: none !important; }
 
+.bs-callout {
+  background-color: #ffffff;
+  border-radius: 2px;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  box-shadow: 0 0 5px 0 rgba(92, 92, 92, 0.2);
+  overflow: hidden;
+  padding: 15px 30px; }
+  .bs-callout h4 {
+    margin-top: 0;
+    margin-bottom: 5px; }
+  .bs-callout p:last-child {
+    margin-bottom: 0; }
+  .bs-callout code {
+    border-radius: 3px; }
+  .bs-callout + .bs-callout {
+    margin-top: -5px; }
+  .bs-callout-default {
+    border-left-color: #777; }
+    .bs-callout-default h4 {
+      color: #777; }
+  .bs-callout-success {
+    border-left-color: #008d4c; }
+    .bs-callout-success h4 {
+      color: #00a65a; }
+  .bs-callout-warning {
+    border-left-color: #e08e0b; }
+    .bs-callout-warning h4 {
+      color: #f39c12; }
+  .bs-callout-danger {
+    border-left-color: #d73925; }
+    .bs-callout-danger h4 {
+      color: #dd4b39; }
+  .bs-callout-info {
+    border-left-color: #00acd6; }
+    .bs-callout-info h4 {
+      color: #00c0ef; }
+
 .zdheader {
   background-color: #042035;
   border: none;
@@ -218,7 +256,7 @@ body {
           padding: 14px 20px 14px 60px; }
           .left-sidebar.expanded .zdsidebar .panel-body li:hover {
             background-color: rgba(0, 0, 0, 0.11);
-            border-left: 3px solid #ffc107;
+            border-left: 3px solid #f39c12;
             padding-left: 57.5px; }
           .left-sidebar.expanded .zdsidebar .panel-body li a {
             display: block;
@@ -363,6 +401,9 @@ select {
   background-color: #ffffff;
   border-radius: 1px !important; }
 
+a.btn {
+  line-height: 22px; }
+
 .btn {
   border: none;
   border-radius: 2px;
@@ -372,23 +413,28 @@ select {
   padding: 5px 20px;
   font-size: 13px;
   transition: .3s ease all; }
+  .btn.btn-info {
+    background: #00c0ef;
+    background-image: none; }
+    .btn.btn-info:hover {
+      background: #00acd6; }
   .btn.btn-danger {
     background: #dd4b39;
     background-image: none; }
     .btn.btn-danger:hover {
-      background: #ed5f64; }
+      background: #d73925; }
   .btn.btn-warning {
     background: #f39c12;
     background-image: none;
     text-shadow: none; }
     .btn.btn-warning:hover {
-      background: #ffd866; }
+      background: #e08e0b; }
   .btn.btn-success {
     background: #00a65a;
     background-image: none;
     text-shadow: none; }
     .btn.btn-success:hover {
-      background: #95b895; }
+      background: #008d4c; }
   .btn.btn-default {
     background: #042035;
     background-image: none;
