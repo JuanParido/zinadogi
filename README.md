@@ -1,6 +1,6 @@
 # zinadogi
 DoGi is a Japanese battle dress, and this is what we are going to use to give ZINA applications a fresh look and feel and get ready for the battle!!
-# Version 2.0 - Kame WORK IN PROGRESS
+# Version 2.0 - Kame: WORK IN PROGRESS
 Consolidation of several items we have built and new ones, wrapped up as a reference application. In addition to Version 1.0., includes (so far):
 * Fixes on sidebar font rendering
 * Unified color palette
