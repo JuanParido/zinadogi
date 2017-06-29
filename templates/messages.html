@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- META TAGS -->
+  <meta charset="UTF-8">
+  <!-- STYLESHEETS -->
+  <link rel="stylesheet" href="../static/css/bootstrap-compilation.css">
+  <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../static/css/zd-style.css">
+  <link rel="stylesheet" href="../static/css/prism.css">
+  <title>ZINA Dogi - The battle dress for ZINA projects</title>
+</head>
+<body>
+  <section class="content">
+    <!-- HEADER SECTION -->
+    <header class="navbar zdheader">
+      
+      <ul class ="nav navbar-nav">
+      <li><a class="zdheader-logo" href="#"><img class="logo-right" src="../static/img/ZINAdogi.png"></a></li>
+      </ul>
+<!--       <article class="col-md-2 pull-right zdsearchbar">
+          <form role="search">
+            <span class="fa fa-search pull-right"></span>
+            <div class="form-group">
+              <input class="form-control zdsearchinput" type="text" placeholder="Search...">
+            </div>
+          </form>
+      </article> -->
+    </header>
+    <!-- SIDEBAR EXPANDED LOGO -->
+    <aside class="left-sidebar">
+      <div class="sidebar-branding"><a href="#"><img class="logo-left" src="../static/img/ZINAdogi.png"></a></div>
+      <span id="toggle-sidemenu-l" class="fa fa-bars"></span>
+      <!-- SIDEBAR MENU -->
+      <div class="panel-group zdsidebar" id="accordion">
+        <div class="panel panel-default"> <!-- MENU ITEM -->
+          <a class="item-button" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+            <div class="panel-heading"> 
+              <div class="panel-title"> <!-- MENU ITEM FONTICON/TITLE -->
+                <i class="fa fa-home item-icon"></i><span class="item-title">Home</span><span class="caret"></span>
+                <span class="menuTip out"></span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="panel panel-default"> <!-- MENU ITEM -->
+          <a class="item-button" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+            <div class="panel-heading">
+              <div class="panel-title"> <!-- MENU ITEM FONTICON/TITLE -->
+                <i class="fa fa-laptop item-icon"></i><span class="item-title">UI Elements</span><span class="caret"></span>
+                <span class="menuTip out"></span>
+              </div>
+            </div>
+          </a>
+          <div id="collapse2" class="panel-collapse collapse">
+            <ul class="panel-body"> <!-- MENU ITEM BODY LIST -->
+              <li><a href="">Messages to user</a></li>
+              <li><a href="">Item2</a></li>
+              <li><a href="">Item3</a></li>
+              <li><a href="">Item4</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="panel panel-default"> <!-- MENU ITEM -->
+          <a class="item-button" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+            <div class="panel-heading">
+              <div class="panel-title"> <!-- MENU ITEM FONTICON/TITLE -->
+                <i class="fa fa-scissors item-icon"></i><span class="item-title">This one is long too</span><span class="caret"></span>
+                <span class="menuTip out"></span>
+              </div>
+            </div>
+          </a>
+          <div id="collapse3" class="panel-collapse collapse">
+            <ul class="panel-body"> <!-- MENU ITEM BODY LIST -->
+              <li><a href="">Item1</a></li>
+              <li><a href="">Item2</a></li>
+              <li><a href="">Item3</a></li>
+              <li><a href="">Item4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- MAIN CONTENT SECTION -->
+    <section class="the-content">
+      <!-- APPLICATIONS' MAGICAL VIEWS GO HERE -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="tile-box" id="callouts">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2 class="tile-title">Callouts</h2>
+                </div>
+                <div class="col-md-6 col-lg-7">
+                  <div class="row">
+                      <div class="col-sm-6 col-lg-4">
+                        <div class="zd-callout zd-callout-success"><h4>Success</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ab consequatur! Voluptas earum provident odit error, molestiae, blanditiis accusamus rerum, ducimus consectetur repellat voluptate dicta suscipit laborum delectus accusantium nisi.</div>
+                      </div>
+                      <div class="col-sm-6 col-lg-4">
+                        <div class="zd-callout zd-callout-warning"><h4>Warning</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ab consequatur! Voluptas earum provident odit error, molestiae, blanditiis accusamus rerum, ducimus consectetur repellat voluptate dicta suscipit laborum delectus accusantium nisi.</div>
+                      </div>
+                      <div class="col-sm-6 col-lg-4">
+                        <div class="zd-callout zd-callout-danger"><h4>Danger</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ab consequatur! Voluptas earum provident odit error, molestiae, blanditiis accusamus rerum, ducimus consectetur repellat voluptate dicta suscipit laborum delectus accusantium nisi.</div>
+                      </div>
+                      <div class="col-sm-6 col-lg-4">
+                        <div class="zd-callout zd-callout-info"><h4>Info</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ab consequatur! Voluptas earum provident odit error, molestiae, blanditiis accusamus rerum, ducimus consectetur repellat voluptate dicta suscipit laborum delectus accusantium nisi.</div>
+                      </div>
+                      <div class="col-sm-6 col-lg-4">
+                        <div class="zd-callout zd-callout-default"><h4>Default</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ab consequatur! Voluptas earum provident odit error, molestiae, blanditiis accusamus rerum, ducimus consectetur repellat voluptate dicta suscipit laborum delectus accusantium nisi.</div>
+                      </div>
+                      <div class="col-sm-offset-6"></div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-5">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="zd-callout zd-callout-dogi"><h4>How to use callouts</h4>Use the following structure to implement a callout on your view:
+                        <pre class="line-numbers"><code class="language-html">
+                          &lt;div class="col-md-4"> &lt;!--Include any desired call width-->
+                            &lt;div class="zd-callout zd-callout-default">&lt;!--You can use default, info, warning, danger or success-->
+                              &lt;h4>Default&lt;/h4>&lt;!--Callout title-->
+                                &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ab consequatur! Voluptas earum provident odit error, molestiae, blanditiis accusamus rerum, ducimus consectetur repellat voluptate dicta suscipit laborum delectus accusantium nisi.&lt;/p>
+                              &lt;/div>&lt;!--Callout text-->
+                          &lt;/div>
+                        </code></pre>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tile-box" id="alerts">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2 class="tile-title">Dismissable alerts</h2>
+                </div>
+                <div class="col-md-6 col-lg-7">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="alert alert-success alert-dismissible" role="alert">
+                        Success
+                        <button class="close" type="button" data-dismiss="alert" aria-hidden="true"><i class="fa fa-times"></i></button>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="alert alert-warning alert-dismissible" role="alert">
+                        Warning
+                        <button class="close" type="button" data-dismiss="alert" aria-hidden="true"><i class="fa fa-times"></i></button>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="alert alert-danger alert-dismissible" role="alert">
+                        Danger
+                        <button class="close" type="button" data-dismiss="alert" aria-hidden="true"><i class="fa fa-times"></i></button>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="alert alert-info alert-dismissible" role="alert">
+                        Info
+                        <button class="close" type="button" data-dismiss="alert" aria-hidden="true"><i class="fa fa-times"></i></button>
+                      </div>
+                    </div>
+                     <div class="col-md-4">
+                       <div class="alert alert-default alert-dismissible" role="alert">Default
+                        <button class="close" type="button" data-dismiss="alert" aria-hidden="true"><i class="fa fa-times"></i></button>
+                      </div>
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h2 class="tile-title">Fixed alerts</h2>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="alert alert-success" role="alert">
+                        Success
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="alert alert-warning" role="alert">
+                        Warning
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="alert alert-danger" role="alert">
+                        Danger
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="alert alert-info" role="alert">
+                        Info
+                      </div>
+                    </div>
+                     <div class="col-md-4">
+                       <div class="alert alert-default" role="alert">
+                         <i class="fa fa-bolt"></i>Default
+                       </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-5">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="zd-callout zd-callout-dogi"><h4>How to use alerts</h4>Use the following structure to implement alerts in your view:
+                       <pre class="line-numbers"><code class="language-html">
+                          &lt;div class="col-md-4"> &lt;!--Include any desired call width-->
+                            &lt;div class="alert alert-default alert-dismissible" role="alert">&lt;!--You can use default, info, warning, danger or success. Always include the role attribute.-->
+                            &lt;!--Include alert-dismissible class whether you like to use dismissable alerts. Otherwise don't include it.-->
+                              &lt;i class="fa fa-bolt">&lt;/i>Default&lt;!--Alert text. You can also include FontAwesome icons at the beginning-->
+                                &lt;button class="close" type="button" data-dismiss="alert" aria-hidden="true">&lt;i class="fa fa-times">&lt;/i>&lt;/button>&lt;!--Closing button. Include only when alert-dismissible class has been included as well.-->
+                                &lt;!--Always include data-dismiss and aria-hidden attributes-->
+                          &lt;/div>
+                        </code></pre>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tile-box" id="modals">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2 class="tile-title">Modals</h2>
+                </div>
+                <div class="col-md-6 col-lg-7">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="modal-content success">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i></button>
+                          <h2 class="modal-title tile-title">Success</h2>
+                        </div>
+                        <div class="modal-body">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius animi ipsa voluptatem repudiandae tenetur adipisci saepe autem fugiat sed debitis! Facilis eaque rem, accusamus dolorem. Non velit fuga magnam, pariatur.</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default modal-launch" modal="success" data-toggle="modal" data-target="#myModal">Launch me!</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="modal-content warning">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i></button>
+                          <h2 class="modal-title tile-title">Warning</h2>
+                        </div>
+                        <div class="modal-body">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius animi ipsa voluptatem repudiandae tenetur adipisci saepe autem fugiat sed debitis! Facilis eaque rem, accusamus dolorem. Non velit fuga magnam, pariatur.</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default modal-launch" modal="warning" data-toggle="modal" data-target="#myModal">Launch me!</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="modal-content danger">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i></button>
+                          <h2 class="modal-title tile-title">Danger</h2>
+                        </div>
+                        <div class="modal-body">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius animi ipsa voluptatem repudiandae tenetur adipisci saepe autem fugiat sed debitis! Facilis eaque rem, accusamus dolorem. Non velit fuga magnam, pariatur.</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default modal-launch" modal="danger" data-toggle="modal" data-target="#myModal">Launch me!</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="modal-content info">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i></button>
+                          <h2 class="modal-title tile-title">Info</h2>
+                        </div>
+                        <div class="modal-body">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius animi ipsa voluptatem repudiandae tenetur adipisci saepe autem fugiat sed debitis! Facilis eaque rem, accusamus dolorem. Non velit fuga magnam, pariatur.</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default modal-launch" modal="info" data-toggle="modal" data-target="#myModal">Launch me!</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="modal-content default">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i></button>
+                          <h2 class="modal-title tile-title">Default</h2>
+                        </div>
+                        <div class="modal-body">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius animi ipsa voluptatem repudiandae tenetur adipisci saepe autem fugiat sed debitis! Facilis eaque rem, accusamus dolorem. Non velit fuga magnam, pariatur.</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default modal-launch" modal="default" data-toggle="modal" data-target="#myModal">Launch me!</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-5">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="zd-callout zd-callout-dogi"><h4>How to use modals</h4>Use the following structure to implement modals in your view:
+                       <pre class="line-numbers"><code class="language-html">
+                          &lt;button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Launch me!&lt;/button>
+                          &lt;!--Use data-toggle and data-target in anchors or buttons to trigger the modal.-->
+                          &lt;div id="myModal" class="modal fade" role="dialog">
+                            &lt;div class="modal-dialog">
+                              &lt;!-- Modal content-->
+                              &lt;div class="modal-content default">&lt;!--You can use default, info, success, warning and danger classes here.-->
+                                &lt;div class="modal-header">
+                                  &lt;button type="button" class="close modal-close" data-dismiss="modal">&lt;i class="fa fa-times">&lt;/i>&lt;/button>
+                                  &lt;h2 class="modal-title tile-title">&lt;/h2>
+                                &lt;/div>
+                                &lt;div class="modal-body">
+                                  &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius animi ipsa voluptatem repudiandae tenetur adipisci saepe autem fugiat sed debitis! Facilis eaque rem, accusamus dolorem. Non velit fuga magnam, pariatur.&lt;/p>
+                                &lt;/div>
+                                &lt;div class="modal-footer">
+                                  &lt;button type="button" class="btn btn-default modal-close" data-dismiss="modal">Close&lt;/button>
+                                &lt;/div>
+                              &lt;/div>
+                            &lt;/div>
+                          &lt;/div>
+                          &lt;/div>
+                        </code></pre>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content modal-example">
+            <div class="modal-header">
+              <button type="button" class="close modal-close" data-dismiss="modal"><i class="fa fa-times"></i></button>
+              <h2 class="example modal-title tile-title"></h2>
+            </div>
+            <div class="modal-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius animi ipsa voluptatem repudiandae tenetur adipisci saepe autem fugiat sed debitis! Facilis eaque rem, accusamus dolorem. Non velit fuga magnam, pariatur.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default modal-close" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER SECTION -->
+    <footer class="zdfooter">
+      <div>
+        <div class="row">
+          <div class="col-sm-10">
+            <ul class="list-inline copyright">
+            </ul>
+          </div>
+          <div class="col-sm-2 text-right">
+            <img class="zdfooter-logo" src="../static/img/nokiaLogo.png" title="NOKIA NETWORKS">
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <!-- SCRIPTS SECTION -->
+  <script src="../static/js/jquery-3.1.1.min.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/zdogi.js"></script>
+  <script src="../static/js/prism.js"></script>
+  <script>
+    Prism.plugins.NormalizeWhitespace.setDefaults({
+    'remove-trailing': true,
+    'remove-indent': true,
+    'left-trim': true,
+    'right-trim': true,
+    'break-lines': 80,
+    'indent': 0,
+    'remove-initial-line-feed': true,
+    'tabs-to-spaces': 4,
+    'spaces-to-tabs': 4
+  });
+  </script>
+  <script>
+    $(function(){
+      $('.modal-launch').click(function(){
+        $('.modal-example').removeClass("danger").removeClass("success").removeClass("info").removeClass("warning").removeClass("default");
+        modalType = $(this).attr("modal");
+        $('.modal-example').addClass(modalType);
+        $('.example.modal-title.tile-title').css("text-transform", "capitalize").text(modalType);
+      });
+      // $('.modal-close').click(function(){
+      //   $('.modal-example').removeClass("danger").removeClass("success").removeClass("info").removeClass("warning").removeClass("default");
+      // })
+    })
+  </script>
+</body>
+</html>

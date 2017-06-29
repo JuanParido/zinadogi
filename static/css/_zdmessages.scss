@@ -1,64 +1,109 @@
 .alert {
   border-radius: 3px;
   color: white !important;
-  &.alert-danger {border-color: $danger-border; background-color: $danger !important;background-image:none !important;}
-  &.alert-warning {border-color: $warning-border; background-color: $warning !important;background-image:none !important;}
-  &.alert-success {border-color: $success-border; background-color: $success !important;background-image:none !important;}
-  &.alert-info {border-color: $info-border; background-color: $info !important;background-image:none !important;}
+  padding: 10px;
+  margin: 0;
+  i{
+    &.fa {
+      padding-right: 10px;
+    }
+  }
+  &.alert-danger {border-color: $danger-border; background-color: $danger !important;background-image:none !important;box-shadow:none;}
+  &.alert-warning {border-color: $warning-border; background-color: $warning !important;background-image:none !important;box-shadow:none;}
+  &.alert-success {border-color: $success-border; background-color: $success !important;background-image:none !important;box-shadow:none;}
+  &.alert-info {border-color: $info-border; background-color: $info !important;background-image:none !important;box-shadow:none;}
+  &.alert-default {border-color: $default-border; background-color: $default !important;background-image:none !important;box-shadow:none;}
+  &.alert-dismissible {
+    padding-right: 35px;
+    .fa.fa-times {
+      color: black;
+      font-size: 13px;
+      font-weight: normal;
+    }
+    &.alert-default {
+      .fa.fa-times {
+        color: white;
+        text-shadow: none;
+      }
+    }
+  }
 }
 //Callouts
-
-.bs-callout {
-    background-color: #ffffff;
-    border-radius: 2px;
-    border: 1px solid #eee;
-    border-left-width: 5px;
-    box-shadow: 0 0 5px 0 rgba(92,92,92,0.2);
-    overflow: hidden;
-    padding: 15px 30px;
+.zd-callout {
+  background-color: #ffffff;
+  border-radius: 2px;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  overflow: hidden;
+  padding: 15px 30px;
+  h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  code {
+    border-radius: 3px;
+  }
+  &+.zd-callout {
+    margin-top: -5px;
+  }
+  &-default {
+    border-left-color: $default;
     h4 {
-      margin-top: 0;
-      margin-bottom: 5px;
+      color: $default;
     }
-    p {
-      &:last-child {
-        margin-bottom: 0;
-      }
+  }
+  &-success {
+    border-left-color: $success;
+    h4 {
+      color: $success;
     }
-    code {
-      border-radius: 3px;
+  }
+  &-warning {
+    border-left-color: $warning;
+    h4 {
+      color: $warning;
     }
-    &+.bs-callout {
-      margin-top: -5px;
+  }
+  &-danger {
+    border-left-color: $danger;
+    h4 {
+      color: $danger;
     }
-    &-default {
-      border-left-color: #777;
-      h4 {
-        color: #777;
-      }
+  }
+  &-info {
+    border-left-color: $info;
+    h4 {
+      color: $info;
     }
-    &-success {
-      border-left-color: $success-border;
-      h4 {
-        color: $success;
-      }
+  }
+}
+//Modal dialogs
+.modal-content {
+  border-top-width: 5px;
+  border-radius: 3px;
+  &.default {border-top-color: $default;}
+  &.info {border-top-color: $info;}
+  &.success {border-top-color: $success;}
+  &.warning {border-top-color: $warning;}
+  &.danger {border-top-color: $danger;}
+  .modal-header {
+    border-bottom: none;
+    .close {
+      font-size: 14px;
     }
-    &-warning {
-      border-left-color: $warning-border;
-      h4 {
-        color: $warning;
-      }
-    }
-    &-danger {
-      border-left-color: $danger-border;
-      h4 {
-        color: $danger;
-      }
-    }
-    &-info {
-      border-left-color: $info-border;
-      h4 {
-        color: $info;
-      }
-    }
+  }
+.modal-body {
+  position: relative;
+  padding: 15px 0;
+  margin: 0 30px;
+  border-top: 1px solid #eeeeee;
+}
+  .modal-footer {
+    border-top: none;
+  }
 }

@@ -64,6 +64,9 @@ a.btn {line-height: 22px;}
     padding: 5px 20px;
     font-size: 13px;
     transition: .3s ease all;
+    &:focus {
+      color: white !important;
+    }
     &.btn-info {
       background: $info;
       background-image: none;
