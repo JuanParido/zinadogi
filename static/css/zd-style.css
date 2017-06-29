@@ -103,7 +103,7 @@ body {
   padding: 10px;
   margin: 0; }
   .alert .fa {
-    padding-right: 10px; }
+    padding-right: 0.6em; }
   .alert .close .fa {
     padding-right: 0 !important; }
   .alert.alert-danger {
@@ -414,34 +414,90 @@ body {
   .zdfooter #about {
     color: white; }
 
-.zd-form, input:not([type="radio"]), textarea, select {
+a.btn, a.fileuploader-input-button {
+  line-height: 22px; }
+
+.btn, .fileuploader-input-button {
+  border: none;
+  border-radius: 2px;
+  color: white;
+  height: 30px;
+  line-height: 9px;
+  padding: 5px 20px;
+  font-size: 13px;
+  transition: .3s ease all; }
+  .btn .fa, .fileuploader-input-button .fa {
+    padding-right: 7px; }
+  .btn:focus, .fileuploader-input-button:focus {
+    color: white !important; }
+  .btn.btn-info, .btn-info.fileuploader-input-button {
+    background: #00c0ef;
+    background-image: none; }
+    .btn.btn-info:hover, .btn-info.fileuploader-input-button:hover {
+      background: #00acd6; }
+  .btn.btn-danger, .btn-danger.fileuploader-input-button {
+    background: #dd4b39;
+    background-image: none; }
+    .btn.btn-danger:hover, .btn-danger.fileuploader-input-button:hover {
+      background: #d73925; }
+  .btn.btn-warning, .btn-warning.fileuploader-input-button {
+    background: #f39c12;
+    background-image: none;
+    text-shadow: none; }
+    .btn.btn-warning:hover, .btn-warning.fileuploader-input-button:hover {
+      background: #e08e0b; }
+  .btn.btn-success, .btn-success.fileuploader-input-button {
+    background: #00a65a;
+    background-image: none;
+    text-shadow: none; }
+    .btn.btn-success:hover, .btn-success.fileuploader-input-button:hover {
+      background: #008d4c; }
+  .btn.btn-default, .btn-default.fileuploader-input-button {
+    background: #042035;
+    background-image: none;
+    text-shadow: none; }
+    .btn.btn-default:hover, .btn-default.fileuploader-input-button:hover {
+      background: #093252;
+      color: white; }
+  .btn.btn-primary, .btn-primary.fileuploader-input-button {
+    background: #042035;
+    background-image: none;
+    text-shadow: none; }
+    .btn.btn-primary:hover, .btn-primary.fileuploader-input-button:hover {
+      background: #093252;
+      color: white; }
+
+.zd-form, input:not([type="radio"]), .fileuploader-input-caption, textarea, select {
   border: 1px solid #cacaca;
   font-size: 14px;
   margin-bottom: 10px;
   padding: 0px 3px;
   width: 100%; }
 
-input:not([type="radio"]) {
+input:not([type="radio"]), .fileuploader-input-caption {
   height: 30px;
   font-size: 14px;
   position: relative;
   border-radius: 1px; }
-  input:not([type="radio"])::-webkit-input-placeholder {
+  input:not([type="radio"])::-webkit-input-placeholder, .fileuploader-input-caption::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     color: #aaaaaa;
     font-style: italic; }
-  input:not([type="radio"])::-moz-placeholder {
+  input:not([type="radio"])::-moz-placeholder, .fileuploader-input-caption::-moz-placeholder {
     /* Firefox 19+ */
     color: #aaaaaa;
     font-style: italic; }
-  input:not([type="radio"]):-ms-input-placeholder {
+  input:not([type="radio"]):-ms-input-placeholder, .fileuploader-input-caption:-ms-input-placeholder {
     /* IE 10+ */
     color: #aaaaaa;
     font-style: italic; }
-  input:not([type="radio"]):-moz-placeholder {
+  input:not([type="radio"]):-moz-placeholder, .fileuploader-input-caption:-moz-placeholder {
     /* Firefox 18- */
     color: #aaaaaa;
     font-style: italic; }
+
+label {
+  margin-bottom: 0; }
 
 .datepicker-btn {
   color: white;
@@ -460,49 +516,61 @@ select {
   background-color: #ffffff;
   border-radius: 1px !important; }
 
-a.btn {
-  line-height: 22px; }
+.fileuploader {
+  background: none;
+  padding: 0; }
 
-.btn {
-  border: none;
-  border-radius: 2px;
-  color: white;
-  height: 30px;
-  line-height: 9px;
-  padding: 5px 20px;
-  font-size: 13px;
-  transition: .3s ease all; }
-  .btn:focus {
-    color: white !important; }
-  .btn.btn-info {
-    background: #00c0ef;
-    background-image: none; }
-    .btn.btn-info:hover {
-      background: #00acd6; }
-  .btn.btn-danger {
-    background: #dd4b39;
-    background-image: none; }
-    .btn.btn-danger:hover {
-      background: #d73925; }
-  .btn.btn-warning {
-    background: #f39c12;
-    background-image: none;
-    text-shadow: none; }
-    .btn.btn-warning:hover {
-      background: #e08e0b; }
-  .btn.btn-success {
-    background: #00a65a;
-    background-image: none;
-    text-shadow: none; }
-    .btn.btn-success:hover {
-      background: #008d4c; }
-  .btn.btn-default {
-    background: #042035;
-    background-image: none;
-    text-shadow: none; }
-    .btn.btn-default:hover {
-      background: #093252;
-      color: white; }
+.fileuploader-input-caption span {
+  color: #aaaaaa;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 26px;
+  margin-bottom: 0; }
+
+.fileuploader-input-button {
+  background: #042035;
+  background-image: none;
+  text-shadow: none; }
+  .fileuploader-input-button:hover {
+    background: #093252;
+    color: white; }
+  .fileuploader-input-button span {
+    line-height: 19px; }
+    .fileuploader-input-button span .fa {
+      padding-right: 7px; }
+
+.import-send-btn {
+  margin-top: 10px;
+  position: relative;
+  top: -26px; }
+
+.fileuploader-item {
+  background: #e9e9e9;
+  padding: 10px 15px;
+  margin-bottom: 7px; }
+  .fileuploader-item:last-child {
+    margin-bottom: 10px; }
+  .fileuploader-item .columns {
+    padding-left: 10px; }
+    .fileuploader-item .columns .column-thumbnail {
+      left: 10px;
+      top: -2px; }
+    .fileuploader-item .columns .column-actions .fileuploader-action {
+      width: 15px;
+      height: 15px; }
+      .fileuploader-item .columns .column-actions .fileuploader-action.fileuploader-action-remove {
+        background: #dd4b39;
+        border-color: #d73925; }
+        .fileuploader-item .columns .column-actions .fileuploader-action.fileuploader-action-remove:hover {
+          background: #d73925; }
+      .fileuploader-item .columns .column-actions .fileuploader-action i::before, .fileuploader-item .columns .column-actions .fileuploader-action i::after {
+        content: '';
+        background-color: #ffffff;
+        height: 7px;
+        left: 6px;
+        position: absolute;
+        top: 3px;
+        width: 1.5px; }
 
 #login-head {
   background: rgba(0, 0, 0, 0.8);
@@ -579,10 +647,23 @@ a.btn {
   background: #888888;
   border-left-color: #333333;
   color: white; }
+  .zd-callout-dogi a {
+    color: #151515;
+    text-decoration: underline; }
+    .zd-callout-dogi a:hover {
+      color: black; }
 
 code[class*="language-"] *, pre[class*="language-"] * {
   font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace !important;
   font-weight: normal !important;
   font-size: 9pt !important; }
+
+span.pre-inline {
+  background: #333;
+  color: white;
+  display: inline-block;
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace !important;
+  font-size: 12px;
+  padding: 0 5px; }
 
 /*# sourceMappingURL=zd-style.css.map */

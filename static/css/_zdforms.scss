@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-input:not([type="radio"]) {
+input:not([type="radio"]), .fileuploader-input-caption {
   @extend .zd-form;
   height: 30px;
   font-size: 14px;
@@ -28,6 +28,10 @@ input:not([type="radio"]) {
     color: #aaaaaa;
     font-style: italic;
   }
+}
+
+label {
+  margin-bottom: 0;
 }
 
 .datepicker-btn {
@@ -54,56 +58,76 @@ select {
   border-radius: 1px !important;
 }
 
-a.btn {line-height: 22px;}
-.btn {
-    border: none;
-    border-radius: 2px;
+//Fileinput
+
+.fileuploader {
+  background: none;
+  padding: 0;
+}
+.fileuploader-input-caption {
+  span {
+    color: #aaaaaa;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 26px;
+    margin-bottom: 0;
+  }
+}
+.fileuploader-input-button {
+  @extend .btn;
+  background: $default;
+  background-image: none;
+  text-shadow: none;
+  &:hover {
+    background: $default-hover;
     color: white;
-    height: 30px;
-    line-height: 9px;
-    padding: 5px 20px;
-    font-size: 13px;
-    transition: .3s ease all;
-    &:focus {
-      color: white !important;
+  }
+  span {
+    line-height: 19px;
+    .fa {
+      padding-right: 7px;
     }
-    &.btn-info {
-      background: $info;
-      background-image: none;
-      &:hover {
-        background: $info-hover;
+  }
+}
+.import-send-btn {
+  margin-top: 10px;
+  position: relative;
+  top: -26px;
+}
+.fileuploader-item {
+  background: $gray-90;
+  padding: 10px 15px;
+  margin-bottom: 7px;
+  &:last-child {
+    margin-bottom: 10px;
+  }
+  .columns {
+    padding-left: 10px;
+    .column-thumbnail {
+      left: 10px;
+      top: -2px;
+    }
+    .column-actions {
+      .fileuploader-action {
+        width: 15px;
+        height: 15px;
+        &.fileuploader-action-remove {
+          background: $danger;
+          border-color: $danger-border;
+          &:hover {
+            background: $danger-border;
+          }
+        }
+        i::before, i::after {
+          content: '';
+          background-color: #ffffff;
+          height: 7px;
+          left: 6px;
+          position: absolute;
+          top: 3px;
+          width: 1.5px;
+        }
       }
     }
-    &.btn-danger {
-      background: $danger;
-      background-image: none;
-      &:hover {
-        background: $danger-hover;
-      }
-    }
-    &.btn-warning {
-      background: $warning;
-      background-image: none;
-      text-shadow: none;
-      &:hover {
-        background: $warning-hover;
-      }
-    }
-    &.btn-success {
-      background: $success;
-      background-image: none;
-      text-shadow: none;
-      &:hover {
-        background: $success-hover;
-      }
-    }
-    &.btn-default {
-      background: $default;
-      background-image: none;
-      text-shadow: none;
-      &:hover {
-        background: $default-hover;
-        color: white;
-      }
-    }
+  }
 }

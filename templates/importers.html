@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- META TAGS -->
+  <meta charset="UTF-8">
+  <!--Plugins-->
+  <link rel="stylesheet" href="../static/css/prism.css"> <!--For Dogi docs only-->
+  <link rel="stylesheet" href="../static/plugins/fileinput/jquery.fileuploader.css">
+  <!-- STYLESHEETS -->
+  <link rel="stylesheet" href="../static/css/bootstrap-compilation.css">
+  <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../static/css/zd-style.css">
+  <title>ZINA Dogi - The battle dress for ZINA projects</title>
+</head>
+<body>
+  <section class="content">
+    <!-- HEADER SECTION -->
+    <header class="navbar zdheader">
+      
+      <ul class ="nav navbar-nav">
+      <li><a class="zdheader-logo" href="#"><img class="logo-right" src="../static/img/ZINAdogi.png"></a></li>
+      </ul>
+<!--       <article class="col-md-2 pull-right zdsearchbar">
+          <form role="search">
+            <span class="fa fa-search pull-right"></span>
+            <div class="form-group">
+              <input class="form-control zdsearchinput" type="text" placeholder="Search...">
+            </div>
+          </form>
+      </article> -->
+    </header>
+    <!-- SIDEBAR EXPANDED LOGO -->
+    <aside class="left-sidebar">
+      <div class="sidebar-branding"><a href="#"><img class="logo-left" src="../static/img/ZINAdogi.png"></a></div>
+      <span id="toggle-sidemenu-l" class="fa fa-bars"></span>
+      <!-- SIDEBAR MENU -->
+      <div class="panel-group zdsidebar" id="accordion">
+        <div class="panel panel-default"> <!-- MENU ITEM -->
+          <a class="item-button" href="start.html">
+            <div class="panel-heading"> 
+              <div class="panel-title"> <!-- MENU ITEM FONTICON/TITLE -->
+                <i class="fa fa-home item-icon"></i><span class="item-title">Home</span>
+                <span class="menuTip out"></span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="panel panel-default"> <!-- MENU ITEM -->
+          <a class="item-button" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+            <div class="panel-heading">
+              <div class="panel-title"> <!-- MENU ITEM FONTICON/TITLE -->
+                <i class="fa fa-laptop item-icon"></i><span class="item-title">UI Elements</span><span class="caret"></span>
+                <span class="menuTip out"></span>
+              </div>
+            </div>
+          </a>
+          <div id="collapse2" class="panel-collapse collapse">
+            <ul class="panel-body"> <!-- MENU ITEM BODY LIST -->
+              <li><a href="messages.html">Messages to user</a></li>
+              <li><a href="">Item2</a></li>
+              <li><a href="">Item3</a></li>
+              <li><a href="">Item4</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="panel panel-default"> <!-- MENU ITEM -->
+          <a class="item-button" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+            <div class="panel-heading">
+              <div class="panel-title"> <!-- MENU ITEM FONTICON/TITLE -->
+                <i class="fa fa-edit item-icon"></i><span class="item-title">Forms and tables</span><span class="caret"></span>
+                <span class="menuTip out"></span>
+              </div>
+            </div>
+          </a>
+          <div id="collapse3" class="panel-collapse collapse">
+            <ul class="panel-body"> <!-- MENU ITEM BODY LIST -->
+              <li><a href="importers.html">Importers and uploaders</a></li>
+              <li><a href="">Item2</a></li>
+              <li><a href="">Item3</a></li>
+              <li><a href="">Item4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- MAIN CONTENT SECTION -->
+    <section class="the-content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="tile-box">
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="tile-title">Importers and file uploaders</h2>
+              </div>
+              <div class="col-md-5 col-lg-6">
+                <div class="row">
+                  <div class="col-md-12">
+                    <form action="#" method="post" enctype="multipart/form-data">
+                      <label for="files">File uploader</label>
+                      <input type="file" name="files">
+                      <button class="btn btn-success pull-right import-send-btn" type="submit"><i class="fa fa-send"></i>Send</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-1"></div>
+              <div class="col-md-6 col-lg-5">
+                <div class="row">
+                  <div class="zd-callout zd-callout-default">
+                    <h4>File uploading instructions</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo est ipsa possimus cumque sapiente doloribus accusantium non, libero maxime nobis fugit fugiat incidunt ipsum, ullam distinctio. Distinctio totam, officiis blanditiis.</p>
+                    <button class="btn btn-default pull-right"><i class="fa fa-download"></i>Download template</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="zd-callout zd-callout-dogi">
+                  <h4>How to implement file uploader</h4>
+                  <p>To work, the file uploader uses <span class="pre-inline">jquery.fileuploader.min.js</span> and <span class="pre-inline">jquer.fileuploader.css</span> files which are already included in DoGi. You can take a look to the documentation if needed at <a href="https://innostudio.de/fileuploader/documentation/" target="_blank">https://innostudio.de/fileuploader/documentation/</a>.</p>
+                  <p>Inside the template file the uploader must be constructed as follows:</p>
+                  <pre class="line-numbers"><code class="language-html">
+                    &lt;form action="#" method="post" enctype="multipart/form-data">
+                      &lt;label for="files">File uploader&lt;/label>
+                      &lt;input type="file" name="files">
+                      &lt;button class="btn btn-success pull-right import-send-btn" type="submit">&lt;i class="fa fa-send">&lt;/i>Send&lt;/button>
+                    &lt;/form>
+                  </code></pre>
+                  <p>Use the following Bootstrap grid structure for all importers:</p>
+                  <pre class="line-numbers"><code class="language-html">
+                    &lt;div class="col-md-5 col-lg-6">
+                      &lt;div class="row">
+                        &lt;div class="col-md-12">
+                          &lt;!-- Form goes here -->
+                        &lt;/div>
+                      &lt;/div>
+                    &lt;/div>
+                    &lt;div class="col-md-1">&lt;!--Nothing here. Just space between form and callout -->&lt;/div>
+                    &lt;div class="col-md-6 col-lg-5">
+                      &lt;div class="row">
+                        &lt;div class="zd-callout zd-callout-default">
+                          &lt;!--File uploading callout -->
+                        &lt;/div>
+                      &lt;/div>
+                    &lt;/div>
+                  </code></pre>
+                  <p>Keep in mind that <strong>all importers and file uploaders </strong>should have an assistance callout with a button to download templates, if applicable.</p>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER SECTION -->
+    <footer class="zdfooter">
+      <div>
+        <div class="row">
+          <div class="col-sm-10">
+            <ul class="list-inline copyright">
+            </ul>
+          </div>
+          <div class="col-sm-2 text-right">
+            <img class="zdfooter-logo" src="../static/img/nokiaLogo.png" title="NOKIA NETWORKS">
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <!-- SCRIPTS SECTION -->
+  <script src="../static/js/jquery-3.1.1.min.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/zdogi.js"></script>
+  <!-- Plugins -->
+  <script src="../static/js/prism.js"></script><!-- For Dogi docs only -->
+  <script src="../static/plugins/fileinput/jquery.fileuploader.min.js"></script>
+  <script>
+    $('input[name="files"]').fileuploader({
+      limit: 1,
+      captions: {
+        button: function(options) { return '<span><i class="fa fa-folder-open"></i>Browse</span>'; },
+        feedback: function(options) { return 'Choose ' + (options.limit == 1 ? 'file' : 'files') + ' to upload'; },
+        feedback2: function(options) { return options.length + ' ' + (options.length > 1 ? ' files were' : ' file was') + ' chosen'; },
+        drop: 'Drop the files here to Upload',
+        paste: '<div class="fileuploader-pending-loader"><div class="left-half" style="animation-duration: ${ms}s"></div><div class="spinner" style="animation-duration: ${ms}s"></div><div class="right-half" style="animation-duration: ${ms}s"></div></div> Pasting a file, click here to cancel.',
+        removeConfirmation: 'Are you sure you want to remove this file?',
+        errors: {
+          filesLimit: 'Only ${limit} files are allowed to be uploaded.',
+          filesType: 'Only ${extensions} files are allowed to be uploaded.',
+          fileSize: '${name} is too large! Please choose a file up to ${fileMaxSize}MB.',
+          filesSizeAll: 'Files that you choosed are too large! Please upload files up to ${maxSize} MB.',
+          fileName: 'File with the name ${name} is already selected.',
+          folderUpload: 'You are not allowed to upload folders.'
+        }
+      }
+    });
+  </script>
+  <script>
+    Prism.plugins.NormalizeWhitespace.setDefaults({
+    'remove-trailing': true,
+    'remove-indent': true,
+    'left-trim': true,
+    'right-trim': true,
+    'break-lines': false,
+    'indent': 0,
+    'remove-initial-line-feed': true,
+    'tabs-to-spaces': 4,
+    'spaces-to-tabs': 4
+  });
+  </script>
+</body>
+</html>

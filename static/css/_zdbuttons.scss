@@ -1,0 +1,65 @@
+a.btn {line-height: 22px;}
+.btn {
+    border: none;
+    border-radius: 2px;
+    color: white;
+    height: 30px;
+    line-height: 9px;
+    padding: 5px 20px;
+    font-size: 13px;
+    transition: .3s ease all;
+    .fa {
+      padding-right: 7px;
+    }
+    &:focus {
+      color: white !important;
+    }
+    &.btn-info {
+      background: $info;
+      background-image: none;
+      &:hover {
+        background: $info-hover;
+      }
+    }
+    &.btn-danger {
+      background: $danger;
+      background-image: none;
+      &:hover {
+        background: $danger-hover;
+      }
+    }
+    &.btn-warning {
+      background: $warning;
+      background-image: none;
+      text-shadow: none;
+      &:hover {
+        background: $warning-hover;
+      }
+    }
+    &.btn-success {
+      background: $success;
+      background-image: none;
+      text-shadow: none;
+      &:hover {
+        background: $success-hover;
+      }
+    }
+    &.btn-default {
+      background: $default;
+      background-image: none;
+      text-shadow: none;
+      &:hover {
+        background: $default-hover;
+        color: white;
+      }
+    }
+    &.btn-primary {
+      background: $primary;
+      background-image: none;
+      text-shadow: none;
+      &:hover {
+        background: $primary-hover;
+        color: white;
+      }
+    }
+}

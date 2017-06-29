@@ -61,6 +61,7 @@ $(function(){
 
     itemMenu = $('.item-button');
     itemMenu.mouseenter(function(){
+      $('span.menuTip').addClass('out');
       if(!($('.left-sidebar').hasClass('expanded'))) {
         var text = $(this).text();
         var menuTip = $(this).find('span.menuTip');
@@ -81,4 +82,17 @@ $(function(){
         var menuTip = $(this).find('span.menuTip');
         menuTip.addClass('out');
     });
+    //Normalizing importer buttons
+    var fileUploaderCaption = $('.fileuploader-input-caption');
+    var fileUploaderBrowse = $('.fileuploader-input-button');
+    var fileUploaderSend = $('.import-send-btn');
+    var fileUploaderDelete = $('.fileuploader-item .column-actions');
+    fileUploaderSend.width(fileUploaderBrowse.width());
+
+    // fileUploaderBrowse.click(function(){
+    //   fileUploaderSend.css('margin-top', '20px');
+    // })
+    // fileUploaderCaption.click(function(){
+    //   fileUploaderSend.css('margin-top', '20px');
+    // })
 });
