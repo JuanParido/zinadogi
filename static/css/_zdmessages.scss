@@ -3,9 +3,12 @@
   color: white !important;
   padding: 10px;
   margin: 0;
-  i{
-    &.fa {
-      padding-right: 10px;
+  .fa {
+    padding-right: 10px;
+  }
+  .close {
+    .fa {
+      padding-right: 0 !important;
     }
   }
   &.alert-danger {border-color: $danger-border; background-color: $danger !important;background-image:none !important;box-shadow:none;}

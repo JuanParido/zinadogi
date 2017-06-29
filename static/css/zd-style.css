@@ -102,8 +102,10 @@ body {
   color: white !important;
   padding: 10px;
   margin: 0; }
-  .alert i.fa {
+  .alert .fa {
     padding-right: 10px; }
+  .alert .close .fa {
+    padding-right: 0 !important; }
   .alert.alert-danger {
     border-color: #d73925;
     background-color: #dd4b39 !important;
