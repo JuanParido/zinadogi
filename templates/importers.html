@@ -95,28 +95,39 @@
               <div class="col-md-12">
                 <h2 class="tile-title">Importers and file uploaders</h2>
               </div>
-              <div class="col-md-5 col-lg-6">
+              <div class="col-md-5 col-lg-5">
                 <div class="row">
                   <div class="col-md-12">
                     <form action="#" method="post" enctype="multipart/form-data">
                       <label for="files">File uploader</label>
                       <input type="file" name="files">
                       <button class="btn btn-success pull-right import-send-btn" type="submit"><i class="fa fa-send"></i>Send</button>
+                      <div class="uploader-helper pull-right"><a type="button" data-toggle="modal" data-target="#upHelper">Need help? <i class="fa fa-question-circle"></i></a>
+                        <div id="upHelper" class="modal fade" role="dialog">
+                          <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content info"><!--You can use default, info, success,
+                              warning and danger classes here.-->
+                              <div class="modal-header">
+                                <button type="button" class="close modal-close" data-dismiss="modal"><i
+                                class="fa fa-times"></i></button>
+                                <h2 class="modal-title tile-title">File uploading instructions</h2>
+                              </div>
+                              <div class="modal-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo est ipsa possimus cumque sapiente doloribus accusantium non, libero maxime nobis fugit fugiat incidunt ipsum, ullam distinctio. Distinctio totam, officiis blanditiis.</p></div>
+                              <div class="modal-footer">
+                                <button class="btn btn-default"><i class="fa fa-download"></i>Download template</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </form>
                   </div>
                 </div>
               </div>
-              <div class="col-md-1"></div>
-              <div class="col-md-6 col-lg-5">
-                <div class="row">
-                  <div class="zd-callout zd-callout-default">
-                    <h4>File uploading instructions</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo est ipsa possimus cumque sapiente doloribus accusantium non, libero maxime nobis fugit fugiat incidunt ipsum, ullam distinctio. Distinctio totam, officiis blanditiis.</p>
-                    <button class="btn btn-default pull-right"><i class="fa fa-download"></i>Download template</button>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12">
+              <div class="col-md-1 col-lg-1"></div>
+              <div class="col-md-7 col-lg-6">
                 <div class="row">
                   <div class="zd-callout zd-callout-dogi">
                   <h4>How to implement file uploader</h4>

@@ -539,6 +539,14 @@ select {
     .fileuploader-input-button span .fa {
       padding-right: 7px; }
 
+.uploader-helper {
+  bottom: 10px;
+  position: relative;
+  right: 20px;
+  cursor: pointer; }
+  .uploader-helper #upHelper .modal-dialog {
+    width: 500px; }
+
 .import-send-btn {
   margin-top: 10px;
   position: relative;
