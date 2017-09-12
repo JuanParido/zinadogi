@@ -1,62 +1,61 @@
 $(function(){
-  var sidemenuSwitch = $('#toggle-sidemenu-l');
-  var itemButton = $('.item-button');
-  $('.logo-right').fadeIn();
+  var sidemenuSwitch = $('#toggle-sidemenu-l'); //Toggle menu button (bars, and left arrow)
+  var itemButton = $('.item-button'); //Each and all of item icons
+  var itemTitle = $('.item-title'); //Each and all of item titles
+  itemTitle.hide();
+  $('.logo-right').fadeIn(); //First display of ZINA[application] logo
   //SIDEBAR EXPANDED OR COLLAPSED VALIDATION
-    var sidebarValidation = function() {
-      if(!$('.left-sidebar').hasClass('expanded')){
-        return false;
-      }
-      else {
-        return true;
-      }
-  }
-  sidebarValidation();
-  //TOGGLE MENU FUNCTION
-  var toggleMenu = function(e){
-    $('#toggle-sidemenu-l').toggleClass('fa-bars').toggleClass('fa-arrow-left').toggleClass('whirl');
-    $('.left-sidebar').toggleClass('expanded');
-
-    if($('.left-sidebar').hasClass('expanded')) {
-      $('.logo-right').animate({marginLeft: "250px", opacity: 0},175, "swing");
-      $('#toggle-sidemenu-l').css('float', 'right');
-      $('.logo-left').fadeIn();
-      $('.the-content').animate({paddingLeft: "270px"},175, "swing");
+  var sidebarValidation = function() { //Function to determine sidebar status. Returns true if expanded; false if collapsed
+    if(!$('.left-sidebar').hasClass('expanded')){
+      return false;
     }
     else {
-      $('.logo-left').fadeOut(100);
-      setTimeout(function(){
-        $('.logo-right').animate({marginLeft: "40px", opacity: 0},175, "swing");
-        $('.logo-right').animate({opacity: 1},500,"swing");
-        $('#toggle-sidemenu-l').css('float', 'left');
-        $('.panel-collapse').collapse('hide');
-        $('.the-content').animate({paddingLeft: "60px"},175, "swing");
-
-      });
+      return true;
     }
-    sidebarValidation();
-    console.log(sidebarValidation());
+  }
+  sidebarValidation(); //Sidebar status function is called to set initial status
+  //TOGGLE MENU FUNCTION
+  var toggleMenu = function(e){ //Function to expand/collapse sidebar
+    sidemenuSwitch.toggleClass('fa-bars').toggleClass('fa-arrow-left').toggleClass('whirl'); //Change of menu button icon between bars and left arrow
+    $('.left-sidebar').toggleClass('expanded'); //Toggle class expanded 
+
+    if($('.left-sidebar').hasClass('expanded')) { //Validation whether the sidebar has expanded class or not
+      $('.logo-right').animate({marginLeft: "220px", opacity: 0},175, "swing"); //Fade out and move right the ZINA[application] logo when expanding sidebar
+      sidemenuSwitch.css('float', 'right'); //Moving menu button to right of the sidebar when expanded (left arrow)
+      $('.logo-left').fadeIn(); //Display ZINA[application] logo inside sidebar
+      $('.the-content').animate({paddingLeft: "240px"},175, "swing"); //Reduce "The content" container so the sidebar doesn't overlay any contents
+      setTimeout(function(){itemTitle.fadeIn(300)},180); //Menu titles shown with fade and delay to avoid bad behavior during expanding
+    }
+    else { 
+      $('.logo-left').fadeOut(100); //Hide ZINA[application] logo inside sidebar
+      $('.logo-right').animate({marginLeft: "40px", opacity: 0},175, "swing"); //Relocate ZINA[application] log of top Navbar back to its position
+      $('.logo-right').animate({opacity: 1},500,"swing"); //Bring ZINA[applicaton] logo back to full opacity after relocation
+      sidemenuSwitch.css('float', 'left'); //Moving menu button to left of the sidebar when expanded (bars)
+      $('.panel-collapse').collapse('hide'); //Collapsing back all submenus and preventing from expanding back when sidebar is collapsed
+      $('.the-content').animate({paddingLeft: "60px"},175, "swing"); //Expanding back "The content" container
+      itemTitle.fadeOut(1);
+    } 
+    sidebarValidation(); //Sidebar status function is called to set after transitions status
   };
   sidemenuSwitch.on("click", toggleMenu); //TOGGLE MENU ON MENU BUTTON
   itemButton.on("click", function(e){ //TOGGLE MENU ON ITEM BUTTONS
     if(sidebarValidation()==false){
       toggleMenu();
     }
-    if($(this).hasClass('collapsed')){
-      $(this).find('.caret').addClass('rotate');
-    }
-    else {
-      $(this).find('.caret').removeClass('rotate');
-    }
+    // if($(this).hasClass('collapsed')){
+    //   $(this).find('.caret').addClass('rotate');
+    // }
+    // else {
+    //   $(this).find('.caret').removeClass('rotate');
+    // }
   })
+
+
   //AutoCopyrightFunction
   var currYear = (new Date).getFullYear();
   var cR = $('.copyright')
-  cR.append('<li>© Nokia</li>')
-  .append('<li>|</li>')
-  .append('<li>ZINATeam ' + currYear + '</li>')
-  .append('<li>|</li>')
-  .append('<li><a id="about" href="#">About us</a></li>');
+  cR.append('<li>© Nokia - ZINATeam ' + currYear + '</li>');
+  //.append('<li><a id="about" href="#">About us</a></li>'); - Disabled for ZINABlog
   //Collapsed menu guide
 
     itemMenu = $('.item-button');

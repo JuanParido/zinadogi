@@ -56,34 +56,46 @@
   }
   &-default {
     border-left-color: $default;
-    h4 {
+    h4, a {
       color: $default;
     }
   }
   &-success {
     border-left-color: $success;
-    h4 {
+    h4, a {
       color: $success;
     }
   }
   &-warning {
     border-left-color: $warning;
-    h4 {
+    h4, a {
       color: $warning;
     }
   }
   &-danger {
     border-left-color: $danger;
-    h4 {
+    h4, a {
       color: $danger;
     }
   }
   &-info {
     border-left-color: $info;
-    h4 {
+    h4, a {
       color: $info;
     }
   }
+  // &-orange {
+  //   border-left-color: $orange;
+  //   h4, a {
+  //     color: $orange;
+  //   }
+  // }
+  // &-sasha {
+  //   border-left-color: $sasha;
+  //   h4, a {
+  //     color: $sasha;
+  //   }
+  // }
 }
 //Modal dialogs
 .modal-content {
@@ -109,4 +121,23 @@
   .modal-footer {
     border-top: none;
   }
+}
+
+.zd-label {
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 2px 8px;
+  &.blog {
+    position: absolute;
+    bottom: 50px;
+    left: 35px;
+  }
+  &-success { background: $success;}
+  &-warning { background: $warning;}
+  &-danger { background: $danger;}
+  &-info { background: $info;}
+  &-default { background: $default;}
+  // &-orange { background: $orange;}
+  // &-sasha { background: $sasha;}
 }

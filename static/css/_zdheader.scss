@@ -1,6 +1,6 @@
 // HEADER STYLES MODULE
 .zdheader {
-  background-color: $navy-blue-10;
+  background-color: $zina-blue-100;
   border: none;
   border-radius: 0;
   height: 50px;
@@ -34,31 +34,31 @@
     margin-top: 10px;
     width: 150px;
   }
-  .zdsearchbar {
-    border: 0;
-    box-shadow: none;
-    font-weight: 400;
-    margin: 4px 12px 0px 10px;
-    padding: 10px;
-    .fa-search {
-      color: $gray-90;
-      font-size: 16px;
-      line-height: 23px;
-    }
-    .form-group {
-      display: inline-block;
-      margin-bottom: 0;
-      vertical-align: middle;
-      width: 90%;
-      .zdsearchinput {
-        background-color: $navy-blue-20;
-        border-color: transparent;
-        border-radius: 0;
-        color: $gray-90;
-        font-size: 12px;
-        font-style: italic;
-        height: 25px;
-      }
-    }
-  }
+  // .zdsearchbar {
+  //   border: 0;
+  //   box-shadow: none;
+  //   font-weight: 400;
+  //   margin: 4px 12px 0px 10px;
+  //   padding: 10px;
+  //   .fa-search {
+  //     color: $gray-90;
+  //     font-size: 16px;
+  //     line-height: 23px;
+  //   }
+  //   .form-group {
+  //     display: inline-block;
+  //     margin-bottom: 0;
+  //     vertical-align: middle;
+  //     width: 90%;
+  //     .zdsearchinput {
+  //       background-color: $navy-blue-20;
+  //       border-color: transparent;
+  //       border-radius: 0;
+  //       color: $gray-90;
+  //       font-size: 12px;
+  //       font-style: italic;
+  //       height: 25px;
+  //     }
+  //   }
+  // }
 }

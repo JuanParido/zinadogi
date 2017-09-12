@@ -129,37 +129,52 @@
               <div class="col-md-1 col-lg-1"></div>
               <div class="col-md-7 col-lg-6">
                 <div class="row">
-                  <div class="zd-callout zd-callout-dogi">
-                  <h4>How to implement file uploader</h4>
-                  <p>To work, the file uploader uses <span class="pre-inline">jquery.fileuploader.min.js</span> and <span class="pre-inline">jquer.fileuploader.css</span> files which are already included in DoGi. You can take a look to the documentation if needed at <a href="https://innostudio.de/fileuploader/documentation/" target="_blank">https://innostudio.de/fileuploader/documentation/</a>.</p>
-                  <p>Inside the template file the uploader must be constructed as follows:</p>
-                  <pre class="line-numbers"><code class="language-html">
-                    &lt;form action="#" method="post" enctype="multipart/form-data">
-                      &lt;label for="files">File uploader&lt;/label>
-                      &lt;input type="file" name="files">
-                      &lt;button class="btn btn-success pull-right import-send-btn" type="submit">&lt;i class="fa fa-send">&lt;/i>Send&lt;/button>
-                    &lt;/form>
-                  </code></pre>
-                  <p>Use the following Bootstrap grid structure for all importers:</p>
-                  <pre class="line-numbers"><code class="language-html">
-                    &lt;div class="col-md-5 col-lg-6">
-                      &lt;div class="row">
-                        &lt;div class="col-md-12">
-                          &lt;!-- Form goes here -->
+                  <div class="col-md-12">
+                    <div class="zd-callout zd-callout-dogi">
+                      <h4>How to implement file uploader</h4>
+                      <p>To work, the file uploader uses <span class="pre-inline">jquery.fileuploader.min.js</span> and <span class="pre-inline">jquer.fileuploader.css</span> files which are already included in DoGi. You can take a look to the documentation if needed at <a href="https://innostudio.de/fileuploader/documentation/" target="_blank">https://innostudio.de/fileuploader/documentation/</a>.</p>
+                      <p>Inside the template file the uploader must be constructed as follows:</p>
+                      <pre class="line-numbers"><code class="language-html">
+                        &lt;form action="#" method="post" enctype="multipart/form-data">
+                          &lt;label for="files">File uploader&lt;/label>
+                          &lt;input type="file" name="files">
+                          &lt;button class="btn btn-success pull-right import-send-btn" type="submit">&lt;i class="fa fa-send">&lt;/i>Send&lt;/button>
+                          &lt;div class="uploader-helper pull-right">&lt;a type="button" data-toggle="modal" data-target="#upHelper">Need help? &lt;i class="fa fa-question-circle">&lt;/i>&lt;/a>
+                          &lt;!-- Helper link -->
+                            &lt;div id="upHelper" class="modal fade" role="dialog"> &lt;!-- Helper Modal -->
+                              &lt;div class="modal-dialog">
+                                &lt;!-- Modal content-->
+                                &lt;div class="modal-content info">&lt;!--You can use default, info, success,
+                                  warning and danger classes here.-->
+                                  &lt;div class="modal-header">
+                                    &lt;button type="button" class="close modal-close" data-dismiss="modal">&lt;i
+                                    class="fa fa-times">&lt;/i>&lt;/button>
+                                    &lt;h2 class="modal-title tile-title">File uploading instructions&lt;/h2>
+                                  &lt;/div>
+                                  &lt;div class="modal-body">
+                                    &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo est ipsa possimus cumque sapiente doloribus accusantium non, libero maxime nobis fugit fugiat incidunt ipsum, ullam distinctio. Distinctio totam, officiis blanditiis.&lt;/p>&lt;/div>
+                                  &lt;div class="modal-footer">
+                                    &lt;button class="btn btn-default">&lt;i class="fa fa-download">&lt;/i>Download template&lt;/button>
+                                  &lt;/div>
+                                &lt;/div>
+                              &lt;/div>
+                            &lt;/div>
+                          &lt;/div>
+                        &lt;/form>
+                      </code></pre>
+                      <p>Use the following Bootstrap grid structure for all importers:</p>
+                      <pre class="line-numbers"><code class="language-html">
+                        &lt;div class="col-md-7 col-lg-6">
+                          &lt;div class="row">
+                            &lt;div class="col-md-12">
+                              &lt;!-- Form goes here -->
+                            &lt;/div>
+                          &lt;/div>
                         &lt;/div>
-                      &lt;/div>
-                    &lt;/div>
-                    &lt;div class="col-md-1">&lt;!--Nothing here. Just space between form and callout -->&lt;/div>
-                    &lt;div class="col-md-6 col-lg-5">
-                      &lt;div class="row">
-                        &lt;div class="zd-callout zd-callout-default">
-                          &lt;!--File uploading callout -->
-                        &lt;/div>
-                      &lt;/div>
-                    &lt;/div>
-                  </code></pre>
-                  <p>Keep in mind that <strong>all importers and file uploaders </strong>should have an assistance callout with a button to download templates, if applicable.</p>
-                </div>
+                      </code></pre>
+                      <p>Keep in mind that <strong>all importers and file uploaders </strong>should have an assistance callout with a button to download templates, if applicable.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

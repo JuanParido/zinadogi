@@ -1,32 +1,60 @@
-// Defining base palette colors. As a convention, sufixes -100 is lighter than -50 the darkest hue of a tone
-// ZINA Standard branding colors
-$navy-blue-5: #041624;
-$navy-blue-10: #042035;
-$navy-blue-20: #093252;
-$navy-blue-90: #aac6dc;
-// Palette of gray used
-$gray-10: #151515;
-$gray-20: #333333;
-$gray-50: #888888;
-$gray-80: #d0d0d0;
-$gray-90: #e9e9e9;
-$trans-black-11: rgba(0,0,0,.11);
+// ZINADoGi Palette - DoGi v2.1 Kame
+// As a convention, sufix -0 is lighter than -100
 
-$danger: #dd4b39;
-$danger-border: #d73925;
-$danger-hover: #d73925;
-$warning: #f39c12;
-$warning-border: #e08e0b;
-$warning-hover: #e08e0b;
-$success: #00a65a;
-$success-border: #008d4c;
-$success-hover: #008d4c;
-$info: #00c0ef;
-$info-border: #00acd6;
-$info-hover: #00acd6;
-$default: $navy-blue-10;
-$default-border: $navy-blue-5;
-$default-hover: $navy-blue-20;
-$primary: $navy-blue-10;
-$primary-border: $navy-blue-5;
-$primary-hover: $navy-blue-20;
+// ZINA Brand Colors
+$zina-blue-100:#070932;
+$zina-blue-90:#080b3b;
+$zina-blue-80:#090c42;
+$zina-blue-70:#0a0d4a;
+$zina-blue-60:#0b0f52;
+$zina-blue-50:#0c1059;
+$zina-blue-40:#0e1161;
+$zina-blue-30:#0f1369;
+$zina-blue-20:#111470;
+$zina-blue-10:#121880;
+
+// ZINA Blacks palette
+$zina-black-100:#1a1a1a;
+$zina-black-90:#2f2f2f;
+$zina-black-80:#444444;
+$zina-black-70:#595959;
+$zina-black-60:#6e6e6e;
+$zina-black-50:#838383;
+$zina-black-40:#979797;
+$zina-black-30:#adadad;
+$zina-black-20:#adadad;
+$zina-black-10:#ececec;
+
+// Add transparencies here, follow the prefix zina- then color, then -trans, and finally trans perecentage
+$zina-black-trans-10:rgba(0,0,0,0.1);
+
+// Template main swatches
+// Use strictly as described by their suffix. Vars with no suffix are bases.
+
+$danger:#a92c2c;
+$danger-border:#993333;
+$danger-hover:#992828;
+
+$warning:#e9a828;
+$warning-border:#cd9423;
+$warning-hover:#da9d25;
+
+$success:#5ea557;
+$success-border:#4a8144;
+$success-hover:#599b51;
+
+$info:#4675cd;
+$info-border:#385ea6;
+$info-hover:#3d66b3;
+
+$action:#4675cd;
+$action-border:#385ea6;
+$action-hover:#3d66b3;
+
+$primary:#070932;
+$primary-border:#030419;
+$primary-hover:#050623;
+
+$default:#070932;
+$default-border:#030419;
+$default-hover:#050623;
