@@ -1,4 +1,10 @@
 .left-sidebar {
+  a {
+    text-decoration: none !important;
+  }
+  * {
+    font-size: 12.5px;
+  }
   background:rgba(7, 9, 50, 0.090);
   height: 100%;
   position: fixed;
@@ -27,6 +33,7 @@
         .panel-heading {
           border-bottom: 0.5px solid #e8e8e8;
           color: $zina-blue-100;
+          height: 40px;
           padding-right:8px;
           text-align: left;
           transition: all .175s ease;
@@ -89,20 +96,65 @@
       .panel-body {
         background-color: $zina-black-10;
         list-style: none;
+        margin-bottom: 0;
         padding: 0;
         li {
+          border-left: 3px solid transparent;
           box-sizing: border-box;
           padding: 10px 20px 10px 20px;
           transition: all .15s ease;
           &:hover {
             background-color: rgba(0,0,0,0.11);
             border-left: 3px solid $zina-blue-10;
-            padding-left:20.5px;
           }
           a {
             display: block;
             color: $zina-blue-100;
             text-decoration: none;
+          }
+        }
+        a.trigger {
+          color: $zina-blue-100;
+          .caret {
+            display: none;
+            float: right;
+            font-size: 15px;
+            margin-top: 8px;
+            transition: all .175s ease;
+            transform: rotate(-90deg);
+          }
+          li {
+              padding-right: 8px;
+          }
+          &:hover {
+            .caret {
+              display: inline-block;
+            }
+          }
+          &[aria-expanded=true] {
+            .caret {
+              display: inline-block;
+              transform: rotate(0deg);
+            }
+            li {
+              background: $zina-blue-50;
+              color: white;
+              text-decoration: none;
+            }
+          }
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        ul.level-3 {
+          li {
+            background: $zina-black-0;
+            box-sizing: border-box;
+            padding: 10px 35px 10px 35px;
+            transition: all .15s ease;
+            &:hover {
+              background-color: rgba(0,0,0,0.11);
+            }
           }
         }
       }
@@ -120,6 +172,26 @@
             text-align: center;
           }
         }
+      .inner-item-button {
+        &[aria-expanded=true] {
+          .panel-heading {
+            background: $zina-blue-50;
+            color: white;
+            text-decoration: none;
+            .caret {
+              display: inline-block;
+              transform: rotate(0deg);
+            }
+          }
+          &:hover {
+            .panel-heading {
+              .panel-title {
+                color: white;
+              }
+            }
+          }
+        }
+      }
     }
   }
   #toggle-sidemenu-l {
@@ -145,6 +217,9 @@
     overflow: hidden;
     transition: all .175s;
     width: 100%;
+    .zdsidebar-inner {
+      margin-bottom: 0;
+    }
     .panel {
       background-color: transparent;
       border: none;
@@ -162,20 +237,26 @@
         background-color: transparent;
         background-image: none;
         border-bottom: 0.5px solid rgba(232,232,232,0);
+        border-left: 3px solid transparent;
         border-radius: 0 !important;
+        box-sizing: border-box;
         color: $zina-black-80;
         padding: 10px;
         text-align: center;
-        transition: all .25s ease;
+        transition: all .15s ease;
         &:hover {
           background: $zina-black-20;
           color: $zina-black-80;
+          border-left: 3px solid $zina-blue-10;
         }
         &:active, &:focus {
           background: black;
           color: white;
         }
         .panel-title {
+          .fa {
+            font-size: 16px;
+          }
           .caret {
             display: none;
           }

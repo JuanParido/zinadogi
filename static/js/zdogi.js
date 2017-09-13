@@ -1,7 +1,11 @@
 $(function(){
   var sidemenuSwitch = $('#toggle-sidemenu-l'); //Toggle menu button (bars, and left arrow)
-  var itemButton = $('.item-button'); //Each and all of item icons
+  var itemButton = $('.item-button'); //Each and all of item buttons
+  var innerButton = $('.inner-item-button'); //Each and all of inner item buttons
   var itemTitle = $('.item-title'); //Each and all of item titles
+  var menuLevel2 = $('.level-2'); //Each and all level-2 menu items
+  var menuLevel3 = $('.level-3'); //Each and all level-3 menu items
+  var menuLevel3Item = $('.level-3 li');
   itemTitle.hide();
   $('.logo-right').fadeIn(); //First display of ZINA[application] logo
   //SIDEBAR EXPANDED OR COLLAPSED VALIDATION
@@ -20,6 +24,8 @@ $(function(){
     $('.left-sidebar').toggleClass('expanded'); //Toggle class expanded 
 
     if($('.left-sidebar').hasClass('expanded')) { //Validation whether the sidebar has expanded class or not
+      menuLevel3Item.show();
+      menuLevel2.show();
       $('.logo-right').animate({marginLeft: "220px", opacity: 0},175, "swing"); //Fade out and move right the ZINA[application] logo when expanding sidebar
       sidemenuSwitch.css('float', 'right'); //Moving menu button to right of the sidebar when expanded (left arrow)
       $('.logo-left').fadeIn(); //Display ZINA[application] logo inside sidebar
@@ -27,6 +33,10 @@ $(function(){
       setTimeout(function(){itemTitle.fadeIn(300)},180); //Menu titles shown with fade and delay to avoid bad behavior during expanding
     }
     else { 
+      menuLevel2.collapse("hide");
+      menuLevel3.collapse("hide");
+      menuLevel3Item.hide();
+      menuLevel2.hide();
       $('.logo-left').fadeOut(100); //Hide ZINA[application] logo inside sidebar
       $('.logo-right').animate({marginLeft: "40px", opacity: 0},175, "swing"); //Relocate ZINA[application] log of top Navbar back to its position
       $('.logo-right').animate({opacity: 1},500,"swing"); //Bring ZINA[applicaton] logo back to full opacity after relocation
@@ -94,4 +104,15 @@ $(function(){
     // fileUploaderCaption.click(function(){
     //   fileUploaderSend.css('margin-top', '20px');
     // })
+    itemButton.click(function(){
+      th = $(this);
+      if (itemButton.attr("aria-expanded") == "true" || !itemButton.attr("aria-expanded")) {
+        $('.inner').collapse("hide");
+      }
+      th.siblings().collapse("show");
+      itemButton.siblings('.outer').not(th.siblings('.outer')).collapse("hide");
+    });
+    innerButton.click(function(){
+        innerButton.siblings('.inner').not($(this).siblings('.inner')).collapse("hide");
+    });
 });

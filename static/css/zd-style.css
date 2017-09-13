@@ -262,6 +262,10 @@ body {
   width: 40px;
   user-select: none;
   z-index: 101; }
+  .left-sidebar a {
+    text-decoration: none !important; }
+  .left-sidebar * {
+    font-size: 12.5px; }
   .left-sidebar .sidebar-branding {
     display: inline-block; }
     .left-sidebar .sidebar-branding .logo-left {
@@ -281,6 +285,7 @@ body {
         .left-sidebar.expanded .zdsidebar .panel .panel-heading {
           border-bottom: 0.5px solid #e8e8e8;
           color: #070932;
+          height: 40px;
           padding-right: 8px;
           text-align: left;
           transition: all .175s ease; }
@@ -320,19 +325,49 @@ body {
       .left-sidebar.expanded .zdsidebar .panel-body {
         background-color: #ececec;
         list-style: none;
+        margin-bottom: 0;
         padding: 0; }
         .left-sidebar.expanded .zdsidebar .panel-body li {
+          border-left: 3px solid transparent;
           box-sizing: border-box;
           padding: 10px 20px 10px 20px;
           transition: all .15s ease; }
           .left-sidebar.expanded .zdsidebar .panel-body li:hover {
             background-color: rgba(0, 0, 0, 0.11);
-            border-left: 3px solid #121880;
-            padding-left: 20.5px; }
+            border-left: 3px solid #121880; }
           .left-sidebar.expanded .zdsidebar .panel-body li a {
             display: block;
             color: #070932;
             text-decoration: none; }
+        .left-sidebar.expanded .zdsidebar .panel-body a.trigger {
+          color: #070932; }
+          .left-sidebar.expanded .zdsidebar .panel-body a.trigger .caret {
+            display: none;
+            float: right;
+            font-size: 15px;
+            margin-top: 8px;
+            transition: all .175s ease;
+            transform: rotate(-90deg); }
+          .left-sidebar.expanded .zdsidebar .panel-body a.trigger li {
+            padding-right: 8px; }
+          .left-sidebar.expanded .zdsidebar .panel-body a.trigger:hover .caret {
+            display: inline-block; }
+          .left-sidebar.expanded .zdsidebar .panel-body a.trigger[aria-expanded=true] .caret {
+            display: inline-block;
+            transform: rotate(0deg); }
+          .left-sidebar.expanded .zdsidebar .panel-body a.trigger[aria-expanded=true] li {
+            background: #0c1059;
+            color: white;
+            text-decoration: none; }
+          .left-sidebar.expanded .zdsidebar .panel-body a.trigger:hover {
+            text-decoration: none; }
+        .left-sidebar.expanded .zdsidebar .panel-body ul.level-3 li {
+          background: #f3f3f3;
+          box-sizing: border-box;
+          padding: 10px 35px 10px 35px;
+          transition: all .15s ease; }
+          .left-sidebar.expanded .zdsidebar .panel-body ul.level-3 li:hover {
+            background-color: rgba(0, 0, 0, 0.11); }
       .left-sidebar.expanded .zdsidebar .about {
         background: #070932;
         bottom: 0;
@@ -345,6 +380,15 @@ body {
           color: white;
           margin-top: 10px;
           text-align: center; }
+      .left-sidebar.expanded .zdsidebar .inner-item-button[aria-expanded=true] .panel-heading {
+        background: #0c1059;
+        color: white;
+        text-decoration: none; }
+        .left-sidebar.expanded .zdsidebar .inner-item-button[aria-expanded=true] .panel-heading .caret {
+          display: inline-block;
+          transform: rotate(0deg); }
+      .left-sidebar.expanded .zdsidebar .inner-item-button[aria-expanded=true]:hover .panel-heading .panel-title {
+        color: white; }
   .left-sidebar #toggle-sidemenu-l {
     color: #fff;
     cursor: pointer;
@@ -365,6 +409,8 @@ body {
     overflow: hidden;
     transition: all .175s;
     width: 100%; }
+    .left-sidebar .zdsidebar .zdsidebar-inner {
+      margin-bottom: 0; }
     .left-sidebar .zdsidebar .panel {
       background-color: transparent;
       border: none;
@@ -380,17 +426,22 @@ body {
         background-color: transparent;
         background-image: none;
         border-bottom: 0.5px solid rgba(232, 232, 232, 0);
+        border-left: 3px solid transparent;
         border-radius: 0 !important;
+        box-sizing: border-box;
         color: #444444;
         padding: 10px;
         text-align: center;
-        transition: all .25s ease; }
+        transition: all .15s ease; }
         .left-sidebar .zdsidebar .panel .panel-heading:hover {
           background: #adadad;
-          color: #444444; }
+          color: #444444;
+          border-left: 3px solid #121880; }
         .left-sidebar .zdsidebar .panel .panel-heading:active, .left-sidebar .zdsidebar .panel .panel-heading:focus {
           background: black;
           color: white; }
+        .left-sidebar .zdsidebar .panel .panel-heading .panel-title .fa {
+          font-size: 16px; }
         .left-sidebar .zdsidebar .panel .panel-heading .panel-title .caret {
           display: none; }
         .left-sidebar .zdsidebar .panel .panel-heading .panel-title .item-title {
