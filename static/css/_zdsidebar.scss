@@ -98,6 +98,9 @@
         list-style: none;
         margin-bottom: 0;
         padding: 0;
+        &.level-3 {
+          background-color: $zina-black-0;
+        }
         li {
           border-left: 3px solid transparent;
           box-sizing: border-box;
@@ -218,7 +221,17 @@
     transition: all .175s;
     width: 100%;
     .zdsidebar-inner {
+      background: $zina-black-10;
       margin-bottom: 0;
+      .panel {
+        a {
+          .panel-heading {
+            &:hover {
+              background: rgba(0,0,0,0.22);
+            }
+          }
+        }
+      }
     }
     .panel {
       background-color: transparent;

@@ -327,6 +327,8 @@ body {
         list-style: none;
         margin-bottom: 0;
         padding: 0; }
+        .left-sidebar.expanded .zdsidebar .panel-body.level-3 {
+          background-color: #f3f3f3; }
         .left-sidebar.expanded .zdsidebar .panel-body li {
           border-left: 3px solid transparent;
           box-sizing: border-box;
@@ -410,7 +412,10 @@ body {
     transition: all .175s;
     width: 100%; }
     .left-sidebar .zdsidebar .zdsidebar-inner {
+      background: #ececec;
       margin-bottom: 0; }
+      .left-sidebar .zdsidebar .zdsidebar-inner .panel a .panel-heading:hover {
+        background: rgba(0, 0, 0, 0.22); }
     .left-sidebar .zdsidebar .panel {
       background-color: transparent;
       border: none;
