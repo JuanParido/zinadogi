@@ -34,31 +34,89 @@
     margin-top: 10px;
     width: 150px;
   }
-  // .zdsearchbar {
-  //   border: 0;
-  //   box-shadow: none;
-  //   font-weight: 400;
-  //   margin: 4px 12px 0px 10px;
-  //   padding: 10px;
-  //   .fa-search {
-  //     color: $gray-90;
-  //     font-size: 16px;
-  //     line-height: 23px;
-  //   }
-  //   .form-group {
-  //     display: inline-block;
-  //     margin-bottom: 0;
-  //     vertical-align: middle;
-  //     width: 90%;
-  //     .zdsearchinput {
-  //       background-color: $navy-blue-20;
-  //       border-color: transparent;
-  //       border-radius: 0;
-  //       color: $gray-90;
-  //       font-size: 12px;
-  //       font-style: italic;
-  //       height: 25px;
-  //     }
-  //   }
-  // }
+  .zdsearchbar {
+    padding-top: 5px;
+    height: 45px;
+    background: $zina-blue-70;
+    width: 100%;
+    @media screen and (min-width:768px){
+      background: none;
+    }
+    #global-search {
+      margin-top: 3px;
+      text-align: center;
+      @media screen and (min-width:768px){
+        margin-top: 5px;
+      }
+      .btn-filtre {
+        display: inline-block;
+        position: relative;
+        //right: -5px;
+      }
+      .input-wrapper {
+        position: relative;
+        display: inline-block;
+        vertical-align: bottom;
+      }
+      #search-input {
+        display: inline-block;
+        height: 30px;
+        width: 60vw;
+        @media screen and (min-width:768px){
+          width:385px;
+        }
+      }
+      .dropdown-menu {
+        min-width: 45vw;
+        max-width: 83vw;
+        padding-top: 10px;
+        @media screen and (min-width:768px){
+          width: 475px;
+          min-width: initial;
+          max-width: initial;
+        }
+        .search_option {
+          height: 40px;
+          display: block;
+          a {
+            height: inherit;
+            display: block;
+          }
+        }
+      }
+      .go {
+        span {
+          display: inline-block;
+          -webkit-transform: scale(0.85,1);
+          -moz-transform: scale(0.85,1);
+          -ms-transform: scale(0.85,1);
+          -o-transform: scale(0.85,1);
+          transform: scale(0.85,1);
+        }
+        background: $info;
+        border: none;
+        color: white;
+        font-family: $exo-regular;
+        height: 29.75px;
+        opacity: 0;
+        padding: 0 5px;
+        position: absolute;
+        right: 0px;
+        text-transform: uppercase;
+        top: 0.25px;
+        transform-origin: right center;
+        transform: scaleX(0);
+        transition: all .15s ease-in;
+        &:hover {
+          background: #ffa95c;
+          color: #000000;
+        }
+        &.active {
+          opacity: 1;
+          transform: scaleX(1);
+          transform-origin: right center;
+        }
+      }
+    }
+  }
 }

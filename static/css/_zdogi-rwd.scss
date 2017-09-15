@@ -1,0 +1,40 @@
+@media screen and (max-width:768px) {
+  .content {
+    .the-content {
+      padding: 100px 15px 40px 15px;
+    }
+  }
+  .zdheader {
+    .logo-right {
+      margin-top: 0;
+    }
+  }
+  aside {
+    &.left-sidebar {
+      width: 0%;
+      &.expanded {
+        width: 100%;
+        .zdsidebar {
+          .panel {
+            .panel-heading {
+              height: 50px;
+              .panel-title  {
+                margin-top: 5px;
+              }
+            }
+          }
+        }
+        #toggle-sidemenu-l {
+           top: 0px;
+        }
+      }
+      #toggle-sidemenu-l {
+         position: relative;
+         top: -20px;
+         &:hover {
+          transform: none;
+         }
+      }
+    }
+  }
+}

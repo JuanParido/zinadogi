@@ -1,5 +1,5 @@
 $(function(){
-  var sidemenuSwitch = $('#toggle-sidemenu-l'); //Toggle menu button (bars, and left arrow)
+  var sidemenuSwitch = $('#toggle-sidemenu-l.sidebar'); //Toggle menu button (bars, and left arrow)
   var itemButton = $('.item-button'); //Each and all of item buttons
   var innerButton = $('.inner-item-button'); //Each and all of inner item buttons
   var itemTitle = $('.item-title'); //Each and all of item titles
@@ -20,6 +20,17 @@ $(function(){
   sidebarValidation(); //Sidebar status function is called to set initial status
   //TOGGLE MENU FUNCTION
   var toggleMenu = function(e){ //Function to expand/collapse sidebar
+    if ($(window).width() >= 768) {
+      $('.the-content').animate({paddingLeft: "55px"},175, "swing"); //Expanding back "The content" container
+    }
+    else {
+      $('.the-content').animate({paddingLeft: "55px"},175, "swing"); //Expanding back "The content" container
+
+    }
+    $(window).resize(function(){
+
+    });
+
     sidemenuSwitch.toggleClass('fa-bars').toggleClass('fa-arrow-left').toggleClass('whirl'); //Change of menu button icon between bars and left arrow
     $('.left-sidebar').toggleClass('expanded'); //Toggle class expanded 
 
@@ -29,7 +40,7 @@ $(function(){
       $('.logo-right').animate({marginLeft: "220px", opacity: 0},175, "swing"); //Fade out and move right the ZINA[application] logo when expanding sidebar
       sidemenuSwitch.css('float', 'right'); //Moving menu button to right of the sidebar when expanded (left arrow)
       $('.logo-left').fadeIn(); //Display ZINA[application] logo inside sidebar
-      $('.the-content').animate({paddingLeft: "240px"},175, "swing"); //Reduce "The content" container so the sidebar doesn't overlay any contents
+      $('.the-content').animate({paddingLeft: "235px"},175, "swing"); //Reduce "The content" container so the sidebar doesn't overlay any contents
       setTimeout(function(){itemTitle.fadeIn(300)},180); //Menu titles shown with fade and delay to avoid bad behavior during expanding
     }
     else { 
@@ -42,7 +53,13 @@ $(function(){
       $('.logo-right').animate({opacity: 1},500,"swing"); //Bring ZINA[applicaton] logo back to full opacity after relocation
       sidemenuSwitch.css('float', 'left'); //Moving menu button to left of the sidebar when expanded (bars)
       $('.panel-collapse').collapse('hide'); //Collapsing back all submenus and preventing from expanding back when sidebar is collapsed
-      $('.the-content').animate({paddingLeft: "60px"},175, "swing"); //Expanding back "The content" container
+      if ($(window).width() >= 768) {
+        $('.the-content').animate({paddingLeft: "55px"},175, "swing"); //Expanding back "The content" container
+      }
+      else {
+        $('.the-content').animate({paddingLeft: "15px"},175, "swing"); //Expanding back "The content" container
+
+      }
       itemTitle.fadeOut(1);
     } 
     sidebarValidation(); //Sidebar status function is called to set after transitions status
@@ -52,12 +69,6 @@ $(function(){
     if(sidebarValidation()==false){
       toggleMenu();
     }
-    // if($(this).hasClass('collapsed')){
-    //   $(this).find('.caret').addClass('rotate');
-    // }
-    // else {
-    //   $(this).find('.caret').removeClass('rotate');
-    // }
   })
 
 
@@ -65,9 +76,9 @@ $(function(){
   var currYear = (new Date).getFullYear();
   var cR = $('.copyright')
   cR.append('<li>© Nokia - ZINATeam ' + currYear + '</li>');
-  //.append('<li><a id="about" href="#">About us</a></li>'); - Disabled for ZINABlog
-  //Collapsed menu guide
 
+  //Collapsed menu tooltip
+  zTooltip = function() {
     itemMenu = $('.item-button');
     itemMenu.mouseenter(function(){
       $('span.menuTip').addClass('out');
@@ -91,6 +102,20 @@ $(function(){
         var menuTip = $(this).find('span.menuTip');
         menuTip.addClass('out');
     });
+    console.log($(window).width());
+  }
+
+  if ($(window).width() >= 768) {
+      zTooltip();
+  }
+  $(window).resize(function(){
+    if ($(window).width() >= 768) {
+        zTooltip();
+    }
+    else {
+      $('span.menuTip').addClass('out');
+    }
+  });
     //Normalizing importer buttons
     var fileUploaderCaption = $('.fileuploader-input-caption');
     var fileUploaderBrowse = $('.fileuploader-input-button');
@@ -115,4 +140,13 @@ $(function(){
     innerButton.click(function(){
         innerButton.siblings('.inner').not($(this).siblings('.inner')).collapse("hide");
     });
+
+    // $(window).on('click',function(){
+    //   if(sidebarValidation()==true){
+    //     toggleMenu();
+    //   }
+    // });
+    // $('aside').on('click', function(event){
+    //   event.stopPropagation();
+    // })
 });
