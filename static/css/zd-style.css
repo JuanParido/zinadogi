@@ -251,8 +251,8 @@ body {
   .zdheader .logo-right {
     display: none;
     margin-left: 40px;
-    margin-top: 10px;
-    width: 150px; }
+    margin-top: 8px;
+    width: 110px; }
   .zdheader .zdsearchbar {
     padding-top: 5px;
     height: 45px;
@@ -345,8 +345,8 @@ body {
       display: none;
       left: 10px;
       margin: 0;
-      top: 15px;
-      width: 150px; }
+      top: 13px;
+      width: 110px; }
   .left-sidebar.expanded {
     font-family: "NokiaPureTWebRegular";
     width: 220px; }
@@ -639,5 +639,25 @@ a.btn {
     .btn.btn-primary:hover {
       background: #050623;
       color: white; }
+
+/* Constants */
+.no-left-padding {
+  padding-left: 0 !important; }
+
+.no-right-padding {
+  padding-right: 0 !important; }
+
+.no-side-padding {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
+.overflow-hidden {
+  overflow: hidden; }
+
+.overflow-hidden-x {
+  overflow-x: hidden; }
+
+.overflow-hidden-y {
+  overflow-y: hidden; }
 
 /*# sourceMappingURL=zd-style.css.map */
