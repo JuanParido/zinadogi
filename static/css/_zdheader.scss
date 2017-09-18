@@ -47,6 +47,7 @@
       text-align: center;
       @media screen and (min-width:768px){
         margin-top: 5px;
+        text-align: right;
       }
       .btn-filtre {
         display: inline-block;
@@ -63,7 +64,7 @@
         height: 30px;
         width: 60vw;
         @media screen and (min-width:768px){
-          width:355px;
+          width:325px;
         }
       }
       .dropdown-menu {
@@ -119,13 +120,27 @@
       }
     }
   }
+  #wide, #mobile {display:none;}
+  #wide {
+    @media screen and (min-width:768px) {
+      display: inline-block;
+    }
+  }
+  #mobile {
+    @media screen and (max-width:767px) {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
   .zd-icons-container {
     display: block;
     height: 50px;
     padding: 15px;
     .fa {
       color: white;
-      font-size: 20px;
+      font-size: 17px;
       &:first-child {
         margin-right: 15px;
       }

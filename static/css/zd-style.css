@@ -266,7 +266,8 @@ body {
       text-align: center; }
       @media screen and (min-width: 768px) {
         .zdheader .zdsearchbar #global-search {
-          margin-top: 5px; } }
+          margin-top: 5px;
+          text-align: right; } }
       .zdheader .zdsearchbar #global-search .btn-filtre {
         display: inline-block;
         position: relative; }
@@ -280,7 +281,7 @@ body {
         width: 60vw; }
         @media screen and (min-width: 768px) {
           .zdheader .zdsearchbar #global-search #search-input {
-            width: 355px; } }
+            width: 325px; } }
       .zdheader .zdsearchbar #global-search .dropdown-menu {
         min-width: 45vw;
         max-width: 83vw;
@@ -325,13 +326,24 @@ body {
           opacity: 1;
           transform: scaleX(1);
           transform-origin: right center; }
+  .zdheader #wide, .zdheader #mobile {
+    display: none; }
+  @media screen and (min-width: 768px) {
+    .zdheader #wide {
+      display: inline-block; } }
+  @media screen and (max-width: 767px) {
+    .zdheader #mobile {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 0; } }
   .zdheader .zd-icons-container {
     display: block;
     height: 50px;
     padding: 15px; }
     .zdheader .zd-icons-container .fa {
       color: white;
-      font-size: 20px; }
+      font-size: 17px; }
       .zdheader .zd-icons-container .fa:first-child {
         margin-right: 15px; }
 

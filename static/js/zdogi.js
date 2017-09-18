@@ -6,6 +6,8 @@ $(function(){
   var menuLevel2 = $('.level-2'); //Each and all level-2 menu items
   var menuLevel3 = $('.level-3'); //Each and all level-3 menu items
   var menuLevel3Item = $('.level-3 li');
+  var mobileIcons = $('#mobile');
+
   itemTitle.hide();
   $('.logo-right').fadeIn(); //First display of ZINA[application] logo
   //SIDEBAR EXPANDED OR COLLAPSED VALIDATION
@@ -20,30 +22,44 @@ $(function(){
   sidebarValidation(); //Sidebar status function is called to set initial status
   //TOGGLE MENU FUNCTION
   var toggleMenu = function(e){ //Function to expand/collapse sidebar
-    if ($(window).width() > 768) {
-      $('.the-content').animate({paddingLeft: "55px"},175, "swing"); //Expanding back "The content" container
-    }
-    else {
-      $('.the-content').animate({paddingLeft: "55px"},175, "swing"); //Expanding back "The content" container
-
-    }
     $(window).resize(function(){
+      if ($(window).width() >= 768) {
+        if (sidebarValidation()) {
+          $('.the-content').animate({paddingLeft: "235px"},175, "swing"); //Expanding back "The content" container
+        }
+        else {
+          $('.the-content').animate({paddingLeft: "55px"},175, "swing"); //Expanding back "The content" container
+        }
+      }
+      else {
+        $('.the-content').animate({paddingLeft: "15px"},175, "swing"); //Expanding back "The content" container
 
+      }
     });
 
     sidemenuSwitch.toggleClass('fa-bars').toggleClass('fa-arrow-left').toggleClass('whirl'); //Change of menu button icon between bars and left arrow
     $('.left-sidebar').toggleClass('expanded'); //Toggle class expanded 
 
     if($('.left-sidebar').hasClass('expanded')) { //Validation whether the sidebar has expanded class or not
+      $('.the-content').animate({paddingLeft: "235px"},175, "swing"); //Reduce "The content" container so the sidebar doesn't overlay any contents
       menuLevel3Item.show();
       menuLevel2.show();
       $('.logo-right').animate({marginLeft: "220px", opacity: 0},175, "swing"); //Fade out and move right the ZINA[application] logo when expanding sidebar
       sidemenuSwitch.css('float', 'right'); //Moving menu button to right of the sidebar when expanded (left arrow)
       $('.logo-left').fadeIn(); //Display ZINA[application] logo inside sidebar
-      $('.the-content').animate({paddingLeft: "235px"},175, "swing"); //Reduce "The content" container so the sidebar doesn't overlay any contents
       setTimeout(function(){itemTitle.fadeIn(300)},180); //Menu titles shown with fade and delay to avoid bad behavior during expanding
+      if($(window).width() < 768) {
+        mobileIcons.fadeOut();
+      }
     }
     else { 
+      if ($(window).width() >= 768) {
+        $('.the-content').animate({paddingLeft: "55px"},175, "swing"); //Expanding back "The content" container
+      }
+      else {
+        $('.the-content').animate({paddingLeft: "15px"},175, "swing"); //Expanding back "The content" container
+
+      }
       menuLevel2.collapse("hide");
       menuLevel3.collapse("hide");
       menuLevel3Item.hide();
@@ -53,14 +69,10 @@ $(function(){
       $('.logo-right').animate({opacity: 1},500,"swing"); //Bring ZINA[applicaton] logo back to full opacity after relocation
       sidemenuSwitch.css('float', 'left'); //Moving menu button to left of the sidebar when expanded (bars)
       $('.panel-collapse').collapse('hide'); //Collapsing back all submenus and preventing from expanding back when sidebar is collapsed
-      if ($(window).width() > 768) {
-        $('.the-content').animate({paddingLeft: "55px"},175, "swing"); //Expanding back "The content" container
-      }
-      else {
-        $('.the-content').animate({paddingLeft: "15px"},175, "swing"); //Expanding back "The content" container
-
-      }
       itemTitle.fadeOut(1);
+      if($(window).width() < 768) {
+        mobileIcons.fadeIn();
+      }
     } 
     sidebarValidation(); //Sidebar status function is called to set after transitions status
   };
@@ -105,11 +117,11 @@ $(function(){
     console.log($(window).width());
   }
 
-  if ($(window).width() > 768) {
+  if ($(window).width() >= 768) {
       zTooltip();
   }
   $(window).resize(function(){
-    if ($(window).width() > 768) {
+    if ($(window).width() >= 768) {
         zTooltip();
     }
     else {
