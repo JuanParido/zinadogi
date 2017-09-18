@@ -250,7 +250,7 @@ body {
       background-color: initial !important; }
   .zdheader .logo-right {
     display: none;
-    margin-left: 40px;
+    margin-left: 25px;
     margin-top: 8px;
     width: 110px; }
   .zdheader .zdsearchbar {
@@ -280,7 +280,7 @@ body {
         width: 60vw; }
         @media screen and (min-width: 768px) {
           .zdheader .zdsearchbar #global-search #search-input {
-            width: 385px; } }
+            width: 355px; } }
       .zdheader .zdsearchbar #global-search .dropdown-menu {
         min-width: 45vw;
         max-width: 83vw;
@@ -325,6 +325,15 @@ body {
           opacity: 1;
           transform: scaleX(1);
           transform-origin: right center; }
+  .zdheader .zd-icons-container {
+    display: block;
+    height: 50px;
+    padding: 15px; }
+    .zdheader .zd-icons-container .fa {
+      color: white;
+      font-size: 20px; }
+      .zdheader .zd-icons-container .fa:first-child {
+        margin-right: 15px; }
 
 .left-sidebar {
   background: rgba(7, 9, 50, 0.09);
@@ -456,6 +465,14 @@ body {
           color: white;
           margin-top: 10px;
           text-align: center; }
+          .left-sidebar.expanded .zdsidebar .about .list-inline figure {
+            width: 80px;
+            overflow: hidden; }
+            .left-sidebar.expanded .zdsidebar .about .list-inline figure img {
+              vertical-align: bottom;
+              width: 100%; }
+          .left-sidebar.expanded .zdsidebar .about .list-inline #cr {
+            vertical-align: text-bottom; }
       .left-sidebar.expanded .zdsidebar .inner-item-button[aria-expanded=true] .panel-heading {
         background: #0c1059;
         color: white;
@@ -565,7 +582,7 @@ body {
     #toggle-sidemenu-l.navbar:hover {
       transform: none; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .content .the-content {
     padding: 100px 15px 40px 15px; }
 

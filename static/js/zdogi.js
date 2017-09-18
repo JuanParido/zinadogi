@@ -20,7 +20,7 @@ $(function(){
   sidebarValidation(); //Sidebar status function is called to set initial status
   //TOGGLE MENU FUNCTION
   var toggleMenu = function(e){ //Function to expand/collapse sidebar
-    if ($(window).width() >= 768) {
+    if ($(window).width() > 768) {
       $('.the-content').animate({paddingLeft: "55px"},175, "swing"); //Expanding back "The content" container
     }
     else {
@@ -49,11 +49,11 @@ $(function(){
       menuLevel3Item.hide();
       menuLevel2.hide();
       $('.logo-left').fadeOut(100); //Hide ZINA[application] logo inside sidebar
-      $('.logo-right').animate({marginLeft: "40px", opacity: 0},175, "swing"); //Relocate ZINA[application] log of top Navbar back to its position
+      $('.logo-right').animate({marginLeft: "25px", opacity: 0},175, "swing"); //Relocate ZINA[application] log of top Navbar back to its position
       $('.logo-right').animate({opacity: 1},500,"swing"); //Bring ZINA[applicaton] logo back to full opacity after relocation
       sidemenuSwitch.css('float', 'left'); //Moving menu button to left of the sidebar when expanded (bars)
       $('.panel-collapse').collapse('hide'); //Collapsing back all submenus and preventing from expanding back when sidebar is collapsed
-      if ($(window).width() >= 768) {
+      if ($(window).width() > 768) {
         $('.the-content').animate({paddingLeft: "55px"},175, "swing"); //Expanding back "The content" container
       }
       else {
@@ -75,7 +75,7 @@ $(function(){
   //AutoCopyrightFunction
   var currYear = (new Date).getFullYear();
   var cR = $('.copyright')
-  cR.append('<li>© Nokia - ZINATeam ' + currYear + '</li>');
+  cR.append('<li> -&nbsp;&nbsp;ZINATeam ' + currYear + '</li>');
 
   //Collapsed menu tooltip
   zTooltip = function() {
@@ -105,11 +105,11 @@ $(function(){
     console.log($(window).width());
   }
 
-  if ($(window).width() >= 768) {
+  if ($(window).width() > 768) {
       zTooltip();
   }
   $(window).resize(function(){
-    if ($(window).width() >= 768) {
+    if ($(window).width() > 768) {
         zTooltip();
     }
     else {

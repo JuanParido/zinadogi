@@ -176,6 +176,17 @@
             color: white;
             margin-top: 10px;
             text-align: center;
+            figure {
+              width: 80px;
+              overflow: hidden;
+              img {
+                vertical-align: bottom;
+                width: 100%;
+              }
+            }
+            #cr {
+              vertical-align: text-bottom;
+            }
           }
         }
       .inner-item-button {

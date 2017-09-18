@@ -30,7 +30,7 @@
   }
   .logo-right {
     display: none;
-    margin-left: 40px;
+    margin-left: 25px;
     margin-top: 8px;
     width: 110px;
   }
@@ -63,7 +63,7 @@
         height: 30px;
         width: 60vw;
         @media screen and (min-width:768px){
-          width:385px;
+          width:355px;
         }
       }
       .dropdown-menu {
@@ -116,6 +116,18 @@
           transform: scaleX(1);
           transform-origin: right center;
         }
+      }
+    }
+  }
+  .zd-icons-container {
+    display: block;
+    height: 50px;
+    padding: 15px;
+    .fa {
+      color: white;
+      font-size: 20px;
+      &:first-child {
+        margin-right: 15px;
       }
     }
   }
