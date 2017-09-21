@@ -162,17 +162,108 @@
           <div class="tile-box">
             <div class="row">
               <div class="col-xs-12">
-                <h1 class="tile-title">Zi Update</h1>
+                <h1 class="tile-title">ZI Update</h1>
                 <ol class="breadcrumb zdbreadcrumb">
                   <li><a href="#">Automatic SPO</a></li>
-                  <li class="active">SPO Creation</li>
+                  <li><a href="#">ZI</a></li>
+                  <li class="active">ZI Update</li>
                 </ol>
               </div>
-              <div class="col-xs-12 col-md-8 col-md-offset-2">
-                <div class="step" data-step="0">
-                  <p class="step-1">Step 1</p>
-                  <p class="step-2">Step 2</p>
-                  <p class="step-3">Step 3</p>
+              <div class="col-xs-12 step-container">
+                <div class="step">
+                  <p class="step-1">Upload file</p>
+                  <p class="step-2">Document <br> importation review</p>
+                  <p class="step-3">Transaction <br>  completed</p>
+                </div>
+              </div>
+              <div class="col-xs-12">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="alert alert-danger alert-dismissible" role="alert"><button class="close" type="button" data-dismiss="alert" aria-hidden="true"><i class="fa fa-times"></i></button><p>You have uploaded a wrong file or outdated template. <a href="#">Need some help?</a></p>
+                    </div>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="alert alert-info-inv alert-dismissible" role="alert">
+                      <button class="close" type="button" data-dismiss="alert" aria-hidden="true"><i class="fa fa-times"></i></button>
+                      <p>The upload process may take a few minutes. If it takes 4 minutes or longer, please restart it.</p>
+                    </div>
+                    <div class="zd-form-container">
+                      <form>
+                        <div class="control-group">
+                          <label class="control-label">Upload file</label>
+                          <div class="controls">
+                            <span class="file-input file-input-new">
+                              <div class="input-group">
+                                <div class="form-control file-caption kv-fileinput-caption">
+                                  <span class="file-caption-ellipsis" title="Upload xls, xlsx file here"></span>
+                                  <div class="file-caption-name" title="Upload xls, xlsx file here">
+                                    <span class="fa fa-file kv-caption-icon">&nbsp;Upload xls,xlsx file here</span>
+                                  </div>
+                                </div>
+                                <div class="input-group-btn">
+                                  <button type="button" title="Clear selected files" class="btn btn-danger fileinput-remove fileinput-remove-button hide"><i class="fa fa-trash"></i> Remove</button>
+                                  <button type="button" title="Abort ongoing upload" class="hide btn btn-default fileinput-cancel fileinput-cancel-button"><i class="fa fa-times"></i> Cancel</button>
+                                  <a href="#" class="btn btn-info btn-file">
+                                    <i class="fa fa-folder-open"></i>&nbsp;Browse...
+                                  </a>
+                                </div>
+                              </div>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="control-group">
+                          <label class="control-label">Customer Team</label>
+                          <div class="controls">
+                            <select name="" id="id_customer_team" class="form-control" name="customer_team">
+                              <option value selected="selected">----------</option>
+                              <option value ="17">Option</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="control-group">
+                          <div class="checkBox">
+                            <input type="checkbox" name="importer-check" id="importer-check" class="dark">
+                            <label class="checkbox-label" for="importer-check">SPOs will be aligned in IPM</label>
+                          </div>
+                        </div>
+                        <div class="button-group text-right">
+                          <a href="#" class="btn btn-info"><i class="fa fa-download"></i>&nbsp;Download template</a>
+                          <button type="button" class="btn btn-success"><i class="fa fa-send"></i>&nbsp;Send file</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="zd-importer-helper info">
+                      <div class="header">
+                        <h3>Rules to complete the file to upload for a successful process:</h3>
+                      </div>
+                      <div class="body">
+                        <h4>Mandatory fields:</h4>
+                        <ul>
+                          <li>Group</li>
+                          <li>Vendor Outline Agreement (VOA)</li>
+                          <li>VOA Item number</li>
+                          <li>WBS</li>
+                        </ul>
+                        <ul>
+                          <li>In <strong>AW1</strong>, you can include <strong>Yes</strong> or leave it empty. This column serves to indicate if the Scratch PO is a Sellable Additional Work.</li>
+                        </ul>
+                        <ul>
+                          <li>If you want to have your <strong>SPO linked in IPM</strong>, you must provide a <em>4th level WBS in WBS column</em>.</li>
+                        </ul>
+                        <ul>
+                          <li>Acc. Indicator is linked with the type of the process you're working with. It can be left empty in case it's a pure Non B2B service. Otherwise, you can use the following categories (specially when working with Change Requests SPOs)</li>
+                        </ul>
+                        <ul>
+                          <li>9 for Risk Contingency</li>
+                          <li>93 for NCC Resources</li>
+                          <li>94 for NCC Delivery</li>
+                          <li>95 for NCC Execution</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

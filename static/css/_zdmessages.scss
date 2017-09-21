@@ -3,6 +3,11 @@
   color: white !important;
   padding: 10px;
   margin: 0;
+  a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+  }
   .fa {
     padding-right: 0.6em;
   }
@@ -15,6 +20,7 @@
   &.alert-warning {border-color: $warning-border; background-color: $warning !important;background-image:none !important;box-shadow:none;}
   &.alert-success {border-color: $success-border; background-color: $success !important;background-image:none !important;box-shadow:none;}
   &.alert-info {border-color: $info-border; background-color: $info !important;background-image:none !important;box-shadow:none;}
+  &.alert-info-inv {margin-bottom:30px; border-color: $zina-black-20; background-color: white !important;background-image:none !important;box-shadow:none; color:$info !important;font-weight: bold;}
   &.alert-default {border-color: $default-border; background-color: $default !important;background-image:none !important;box-shadow:none;}
   &.alert-dismissible {
     padding-right: 35px;
@@ -84,18 +90,47 @@
       color: $info;
     }
   }
-  // &-orange {
-  //   border-left-color: $orange;
-  //   h4, a {
-  //     color: $orange;
-  //   }
-  // }
-  // &-sasha {
-  //   border-left-color: $sasha;
-  //   h4, a {
-  //     color: $sasha;
-  //   }
-  // }
+}
+.zd-importer-helper {
+  border: 1px solid $zina-black-20;
+  border-radius: 3px;
+  .header {
+    background: $zina-black-70;
+    padding: 20px 25px;
+    border: $zina-black-20;
+    h3 {
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 0 !important;
+    }
+  }
+  .body {
+    padding: 20px 25px;
+    h4 {
+      font-weight: bold;
+      font-size: 16.5px;
+    }
+    ul {
+      padding: 0;
+      margin-bottom: 20px;
+      list-style:none;
+      li {
+        &:before {
+          content: '■';
+          padding-right: 10px;   
+        }
+      }
+    }
+    em {font-style:normal;}
+  }
+  &.info {
+    .header {background: $info;}
+    .body {
+      h4, strong, em {color: $info;}
+      li:before {color: $info;}
+    }
+  }
 }
 //Modal dialogs
 .modal-content {

@@ -6,11 +6,15 @@
   width: 100%;
 }
 
+.form-control {
+  height: 30px;
+  padding: 4px 12px;
+}
 .input-group-addon {
   border-color: $zina-black-10;
 }
 
-input:not([type="radio"]), .fileuploader-input-caption {
+input:not([type="radio"]):not([type="checkbox"]), .fileuploader-input-caption {
   @extend .zd-form;
   height: 30px;
   font-size: 14px;
@@ -63,91 +67,43 @@ select {
   border-radius: 1px !important;
 }
 
-//Fileinput
+//file uploader
 
-.fileuploader {
-  background: none;
-  padding: 0;
-}
-.fileuploader-input-caption {
-  span {
-    color: #aaaaaa;
-    font-style: italic;
-    font-weight: normal;
-    line-height: 26px;
-    margin-bottom: 0;
-  }
-}
-.fileuploader-input-button {
-  @extend .btn;
-  background: $default;
-  background-image: none;
-  text-shadow: none;
-  &:hover {
-    background: $default-hover;
-    color: white;
-  }
-  span {
-    line-height: 19px;
-    .fa {
-      padding-right: 7px;
-    }
-  }
-}
-.uploader-helper {
-  bottom: 10px;
-  position: relative;
-  right: 20px;
-  cursor: pointer;
-  #upHelper {
-    .modal-dialog {
-      width: 500px;
-    }
-  }
-}
-.import-send-btn {
-  margin-top: 10px;
-  position: relative;
-  top: -26px;
-}
-.fileuploader-item {
-  background: $zina-black-20;
-  padding: 10px 15px;
-  margin-bottom: 7px;
-  &:last-child {
-    margin-bottom: 10px;
-  }
-  .columns {
-    padding-left: 10px;
-    .column-thumbnail {
-      left: 10px;
-      top: -2px;
-    }
-    .column-actions {
-      .fileuploader-action {
-        width: 15px;
-        height: 15px;
-        &.fileuploader-action-remove {
-          background: $danger;
-          border-color: $danger-border;
-          &:hover {
-            background: $danger-border;
-          }
-        }
-        i::before, i::after {
-          content: '';
-          background-color: #ffffff;
-          height: 7px;
-          left: 6px;
-          position: absolute;
-          top: 3px;
-          width: 1.5px;
-        }
+.zd-form-container {
+  .control-group {
+    margin-bottom: 30px;
+    .checkBox {
+      .checkbox-label {
+        vertical-align: top;
+        color: $info;
+        padding-left: 10px;
       }
     }
   }
+  .button-group {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  .control-label {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: $info;
+  }
+  .controls {
+    .file-input {
+      .input-group {
+        .file-caption, .file-caption-name {
+          color: $zina-black-40;
+        }
+      }
+    }
+  }   
 }
 
+//Wizard
+.step-container {
+  height: 130px;
+}
 .step {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -156,7 +112,7 @@ select {
   -ms-flex-pack: justify;
   justify-content: space-between;
   counter-reset: step;
-  margin: 2em;
+  margin: 2em 0;
   position: relative;
   &:before, &:after {
     content: '';
@@ -191,6 +147,7 @@ select {
     height: 2em;
     margin: 0;
     position: relative;
+    text-align: center;
     z-index: 2;
     &:first-of-type {
       background: linear-gradient(to right, #fff 50%, transparent 50%);
