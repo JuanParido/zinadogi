@@ -7,6 +7,7 @@ $(function(){
   var menuLevel3 = $('.level-3'); //Each and all level-3 menu items
   var menuLevel3Item = $('.level-3 li');
   var mobileIcons = $('#mobile');
+  var filterPanel = $('.filter-panel-trigger');
 
   itemTitle.hide();
   $('.logo-right').fadeIn(); //First display of ZINA[application] logo
@@ -161,4 +162,16 @@ $(function(){
     // $('aside').on('click', function(event){
     //   event.stopPropagation();
     // })
+    filterPanel.click(function(){
+      var filters = $('#filters');
+      if (filters.hasClass('in')) {
+        $('.indicator').removeClass('fa-chevron-up');
+        $('.indicator').addClass('fa-chevron-down');
+      }
+      else {
+        $('.indicator').removeClass('fa-chevron-down');
+        $('.indicator').addClass('fa-chevron-up');
+      }
+    })
+
 });

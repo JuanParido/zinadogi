@@ -6,12 +6,17 @@
   width: 100%;
 }
 
+.input-group-addon {
+  border-color: $zina-black-10;
+}
+
 input:not([type="radio"]), .fileuploader-input-caption {
   @extend .zd-form;
   height: 30px;
   font-size: 14px;
   position: relative;
   border-radius: 1px;
+  border-color:$zina-black-10 !important;
   &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
      color: #aaaaaa;
      font-style: italic;
@@ -106,7 +111,7 @@ select {
   top: -26px;
 }
 .fileuploader-item {
-  background: $gray-90;
+  background: $zina-black-20;
   padding: 10px 15px;
   margin-bottom: 7px;
   &:last-child {
@@ -141,4 +146,100 @@ select {
       }
     }
   }
+}
+
+.step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 2em;
+  position: relative;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 1.05em;
+    bottom: 0.5em;
+    left: 0;
+    right: 0;
+    background: $zina-black-30;
+  }
+  &:after {
+    background: $success-border;
+    transition: right 0.5s;
+  }
+  &[data-step="0"]{
+    &:after {
+      right: 100%;
+    }
+  }
+  &[data-step="1"]{
+    &:after {
+      right: 50%;
+    }
+  }
+  input {
+    display: none;
+  }
+  p {
+    color: #aaa;
+    counter-increment: step;
+    cursor: pointer;
+    height: 2em;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    &:first-of-type {
+      background: linear-gradient(to right, #fff 50%, transparent 50%);
+    }
+    &:last-of-type {
+      background: linear-gradient(to right, transparent 50%, #fff 50%);  
+    }
+    &:before {
+      content: counter(step);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 0 auto 0.5em;
+      height: 2.5em;
+      width: 2.5em;
+      border-radius: 2em;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      border: 4px solid $zina-black-30;
+      background: white;
+    }
+  }
+  .forward p {
+    &:before {
+      -webkit-transition: background 0 0.5s, color 0 0.5s;
+      transition: background 0 0.5s, color 0 0.5s;
+    }
+  }
+    &[data-step="0"] p:nth-child(1),
+    &[data-step="1"] p:nth-child(2),
+    &[data-step="2"] p:nth-child(3) {
+      color: $zina-black-80;
+    }
+    &[data-step="1"] p:nth-child(1)::before,
+    &[data-step="2"] p:nth-child(1)::before,
+    &[data-step="2"] p:nth-child(2)::before {
+      content: '✔︎';
+    }
+    &[data-step="0"] p:nth-child(1)::before,
+    &[data-step="1"] p:nth-child(2)::before,
+    &[data-step="2"] p:nth-child(3)::before,
+    &[data-step="1"] p:nth-child(1)::before,
+    &[data-step="2"] p:nth-child(1)::before,
+    &[data-step="2"] p:nth-child(2)::before {
+      border-color: $success-border;
+      color: $success;
+    }
 }

@@ -20,6 +20,23 @@ body {
   position: relative;
   .the-content {
      padding: 60px 15px 40px 55px;
+     .panel#filter-panel {
+        box-shadow: none;
+        background: none;
+        border: none;
+        .panel-heading {
+          background-image: none;
+          background: $zina-black-0;
+          &:hover {
+            background: $zina-black-10;
+          }
+        }
+        .panel-collapse {
+          .panel-body {
+            border-top: none;
+          }
+        }
+      }
     .tile-box {
       background-color: #ffffff;
       border-radius: 2px;
@@ -29,6 +46,20 @@ body {
       padding: 20px 25px;
       [class^="col"] {
         margin-bottom: 10px;
+      }
+      &.insider {
+        box-shadow: none;
+        border: 1px solid $zina-black-0;
+        padding: 10px;
+      }
+      .zdbreadcrumb {
+        background: none;
+        color: $zina-black-30;
+        margin-top: -5px;
+        padding: 0;
+        li, a {
+          font-size: 13px;
+        }
       }
     }
   }

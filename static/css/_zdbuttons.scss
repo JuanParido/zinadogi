@@ -8,6 +8,9 @@ a.btn {line-height: 22px;}
     padding: 5px 20px;
     font-size: 13px;
     transition: .3s ease all;
+    &.margin {
+      margin-right: 10px;
+    }
     .fa {
       padding-right: 7px;
     }
@@ -61,5 +64,11 @@ a.btn {line-height: 22px;}
         background: $primary-hover;
         color: white;
       }
+    }
+    &.disabled {
+      background: $unable;
+      background-image: none;
+      color: $zina-black-20;
+      text-shadow: none;
     }
 }

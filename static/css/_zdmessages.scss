@@ -127,7 +127,7 @@
   color: white;
   text-transform: uppercase;
   font-size: 12px;
-  padding: 2px 8px;
+  padding: 2px 15px;
   &.blog {
     position: absolute;
     bottom: 50px;
@@ -138,6 +138,19 @@
   &-danger { background: $danger;}
   &-info { background: $info;}
   &-default { background: $default;}
-  // &-orange { background: $orange;}
-  // &-sasha { background: $sasha;}
+  &:hover {
+    color: white;
+    text-decoration: none;
+    &-success { background: $success-hover;}
+    &-warning { background: $warning-hover;}
+    &-danger { background: $danger-hover;}
+    &-info { background: $info-hover;}
+    &-default { background: $default-hover;}
+  }
+  &.disabled {
+    background: $unable;
+    background-image: none;
+    color: $zina-black-20;
+    text-shadow: none;
+  }
 }

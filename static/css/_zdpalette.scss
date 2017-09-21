@@ -22,7 +22,7 @@ $zina-black-60:#6e6e6e;
 $zina-black-50:#838383;
 $zina-black-40:#979797;
 $zina-black-30:#adadad;
-$zina-black-20:#adadad;
+$zina-black-20:#c1c1c1;
 $zina-black-10:#ececec;
 $zina-black-0:#f3f3f3;
 
@@ -56,6 +56,58 @@ $primary:#070932;
 $primary-border:#030419;
 $primary-hover:#050623;
 
-$default:#070932;
-$default-border:#030419;
-$default-hover:#050623;
+$default:#595959;
+$default-border:#2f2f2f;
+$default-hover:#444444;
+
+$unable: #adadad;
+$unable-border: #979797;
+
+.color-danger {
+	color: $danger;
+	&:hover {
+		color: $danger-hover;
+	}
+}
+.color-warning {
+	color: $warning;
+	&:hover {
+		color: $warning-hover;
+	}
+}
+.color-success {
+	color: $success;
+	&:hover {
+		color: $success-hover;
+	}
+}
+.color-info {
+	color: $info;
+	&:hover {
+		color: $info-hover;
+	}
+}
+.color-action {
+	color: $action;
+	&:hover {
+		color: $action-hover;
+	}
+}
+.color-primary {
+	color: $primary;
+	&:hover {
+		color: $primary-hover;
+	}
+}
+.color-default {
+	color: $default;
+	&:hover {
+		color: $default-hover;
+	}
+}
+.color-neutral {
+	color: $zina-black-80;
+	&:hover {
+		color: $zina-black-100;
+	}
+}

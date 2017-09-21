@@ -1,0 +1,93 @@
+.table {
+    font-size: 12.5px;
+    text-align: center;
+  .smaller {
+    font-size: 0.95em;
+  }
+  .zd-label-action {
+    color: white;
+    background: $unable;
+    text-transform: capitalize;
+    &:hover {
+      background: $info-hover;
+    }
+  }
+  .btn-info-white {
+    background: white;
+    border: none;
+    color: $info;
+    height: auto;
+    text-align: center;
+    .fa {
+      display: block;
+      padding: 0;
+    }
+    &:hover {
+      background: $zina-black-10;
+      color: $info-hover;
+    }
+  }
+  .progress {
+    border-radius: 2px;
+    display: inline-block;
+    height: 10px;
+    margin-bottom: 0;
+    overflow: unset;
+    vertical-align: text-top;
+    width: 100%;
+      position: relative;
+    span {
+      position: relative;
+      color: black;
+      display: inline-block;
+      font-size: 12px;
+      bottom: 0px;
+      width: 100%;
+    }
+    .progress-bar {
+      background-image: none;
+      background: $success;
+    }
+  }
+  thead {
+    tr {
+      background: $zina-blue-90;
+      color: white;
+      th {
+        border: 1px solid $zina-blue-30;
+        border-top: none;
+        text-align: center;
+        &:first-child {
+          text-align: left;
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        border: 1px solid $zina-black-10;
+        padding: 15px 10px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+.pagination {
+  li {
+    a {
+      color: $info;
+      border: 1px solid $zina-black-10;
+    }
+    &.active {
+      a {
+        color: white;
+        background: $info;
+        border-color: $info-border;
+        &:hover, &:active, &:focus {
+          background: $info-hover;
+        }
+      }
+    }
+  }
+}
