@@ -1,0 +1,24 @@
+.panel-group {
+  &.summary {
+    margin-bottom: 2.5px;
+    .panel {
+      border-radius: 2px 2px 0 0;
+    }
+    .panel-body {
+      background: $zina-black-10;
+      &.danger {border-top: 2px solid $danger;}
+      &.warning {border-top: 2px solid $warning;}
+      &.success {border-top: 2px solid $success;}
+    }
+      ul {
+        list-style: none;
+        padding-right:30px;
+        margin: 0;
+        li {
+        }
+      }
+  }
+}
+.summary-panel {
+  margin-bottom: 40px;
+}

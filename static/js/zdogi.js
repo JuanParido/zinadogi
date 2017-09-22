@@ -7,7 +7,8 @@ $(function(){
   var menuLevel3 = $('.level-3'); //Each and all level-3 menu items
   var menuLevel3Item = $('.level-3 li');
   var mobileIcons = $('#mobile');
-  var filterPanel = $('.filter-panel-trigger');
+  var triggerPanel = $('.panel-trigger');
+  var triggerAllPanels = $('.all-panels-trigger');
 
   itemTitle.hide();
   $('.logo-right').fadeIn(); //First display of ZINA[application] logo
@@ -162,9 +163,9 @@ $(function(){
     // $('aside').on('click', function(event){
     //   event.stopPropagation();
     // })
-    filterPanel.click(function(){
-      var filters = $('#filters');
-      if (filters.hasClass('in')) {
+    triggerPanel.click(function(){
+      var trigger = $(this).next('.panel-collapse');
+      if (trigger.hasClass('in')) {
         $('.indicator').removeClass('fa-chevron-up');
         $('.indicator').addClass('fa-chevron-down');
       }
@@ -173,5 +174,15 @@ $(function(){
         $('.indicator').addClass('fa-chevron-up');
       }
     })
-
+    collapse_flag = false;
+    triggerAllPanels.click(function(){
+      if (!collapse_flag) {
+        $('.collapse.not-menu').collapse('show');
+        collapse_flag = true;
+      }
+      else {
+        $('.collapse.not-menu').collapse('hide');
+        collapse_flag = false;
+      }
+    })
 });

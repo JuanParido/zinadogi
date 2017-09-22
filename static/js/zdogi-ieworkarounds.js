@@ -6,6 +6,8 @@ $(function(){
       {
        $('.step-1').css('left', '-23%');   
        $('.step-3').css('right', '-23%');   
+       $('.step-container').css('width', '95%');
+       $('.step-container').css('margin-left', '2.5%')
       }
       return false;
   }
